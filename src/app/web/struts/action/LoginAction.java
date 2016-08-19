@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import ldapBiz.Itest;
-import ldapBizImpl.Test;
+import ldapBiz.ILdap;
+import ldapBizImpl.LdapConnector;
 
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -164,7 +164,7 @@ public class LoginAction extends BaseAction {
 		ActionMessages messages = new ActionMessages();
 		String url = "";
 		HttpSession session = request.getSession();
-		Itest ldap = new Test(uname, upass,OU);
+		ILdap ldap = new LdapConnector(uname, upass,OU);
 		DirContext ctx = null;
 		try {
 			ctx = ldap.getConnect();

@@ -12,18 +12,20 @@ import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.directory.SearchControls;
 import javax.naming.directory.SearchResult;
-import ldapBiz.Itest;
+import ldapBiz.ILdap;
 
-public class Test implements Itest {
+public class LdapConnector implements ILdap {
+	
 	private Attributes attrs = null;
 	private DirContext context = null;
 	private String[] props = new String[5];
 	private String uname = null;
 	private String upass = null;
-	private String OU="";
-	private String baseDN ="";
+	private String OU = "";
+	private String baseDN = "";
 	private String url = "";// Delphi Domain
-	public Test(String uname, String upass,String OU) {
+
+	public LdapConnector(String uname, String upass, String OU) {
 		this.uname = uname;
 		this.upass = upass;
 		this.OU = OU;
@@ -35,33 +37,39 @@ public class Test implements Itest {
 	public DirContext getConnect() throws IOException, NamingException {
 		/**
 		 * 从配置文件读出ldap服务器地址 Properties props=new Properties(); FileInputStream
-		 * in=null; try { in = new FileInputStream("c:/ldapServer.properties"); }
-		 * catch (FileNotFoundException e) { // TODO �Զ���� catch ��
+		 * in=null; try { in = new FileInputStream("c:/ldapServer.properties");
+		 * } catch (FileNotFoundException e) { // TODO �Զ���� catch ��
 		 * e.printStackTrace(); } props.load(in); in.close(); String
 		 * username=props.getProperty("ldap.username"); String
 		 * password=props.getProperty("ldap.password");
 		 */
 		// String url="ldap://sdaac.com:389"; //SDAAC domain
 		Hashtable<String, String> env = new Hashtable<String, String>();
-		if(OU.equals("ASIA")){
+		if (OU.equals("ASIA")) {
 			url = "ldap://asia.delphiauto.net:389";// Delphi Domain
-			baseDN ="OU=People,DC=Asia,DC=DelphiAuto,DC=net";
+			baseDN = "OU=People,DC=Asia,DC=DelphiAuto,DC=net";
 			env.put(Context.SECURITY_PRINCIPAL, uname + "@asia.delphiauto.net");
-		}else if(OU.equals("NA")){
+		} else if (OU.equals("NA")) {
 			url = "ldap://NorthAmerica.delphiauto.net:389";// Delphi Domain
-			baseDN ="OU=People,DC=NorthAmerica,DC=DelphiAuto,DC=net";
-			env.put(Context.SECURITY_PRINCIPAL, uname + "@NorthAmerica.delphiauto.net");
-		}else if(OU.equals("EUR")){
+			baseDN = "OU=People,DC=NorthAmerica,DC=DelphiAuto,DC=net";
+			env.put(Context.SECURITY_PRINCIPAL, uname
+					+ "@NorthAmerica.delphiauto.net");
+		} else if (OU.equals("EUR")) {
 			url = "ldap://Europe.delphiauto.net:389";// Delphi Domain
-			baseDN ="OU=People,DC=Europe,DC=DelphiAuto,DC=net";
-			env.put(Context.SECURITY_PRINCIPAL, uname + "@Europe.delphiauto.net");
-			//"CN=Gandon, Arnaud,OU=LUBAS,OU=People,DC=Europe,DC=DelphiAuto,DC=net"
+			baseDN = "OU=People,DC=Europe,DC=DelphiAuto,DC=net";
+			env.put(Context.SECURITY_PRINCIPAL, uname
+					+ "@Europe.delphiauto.net");
+			// "CN=Gandon, Arnaud,OU=LUBAS,OU=People,DC=Europe,DC=DelphiAuto,DC=net"
+		} else if (OU.equals("SDAAC")) {
+			url = "ldap://sdaac.com:389";// Delphi Domain
+			baseDN = "OU=People,DC=sdaac,DC=com";
+			env.put(Context.SECURITY_PRINCIPAL, uname
+					+ "@Europe.delphiauto.net");
+			// "CN=Gandon, Arnaud,OU=LUBAS,OU=People,DC=Europe,DC=DelphiAuto,DC=net"
 		}
-		
-		
-		
+
 		// env.put(Context.SECURITY_PRINCIPAL,uname+"@sdaac.com" );
-		
+
 		env.put(Context.SECURITY_CREDENTIALS, upass);
 		DirContext inital = new InitialDirContext(env);
 		context = (DirContext) inital.lookup(url);
@@ -88,7 +96,7 @@ public class Test implements Itest {
 			for (; ne.hasMore();) {
 				entry = ne.next();
 				Attribute pager_attribute = entry.getAttributes().get(
-						"sAMAccountName");//NetID
+						"sAMAccountName");// NetID
 				if (pager_attribute != null && !pager_attribute.equals("")) {
 					String pager = pager_attribute.toString();
 					String[] uids = pager.split(": ");
@@ -101,25 +109,23 @@ public class Test implements Itest {
 		}
 		return empID;
 	}
-//	//-------------------TEST-----------------
-//	public static void main(String[] args) {
-//		long t1 = Calendar.MILLISECOND;
-//		Test t = new Test("pzbwv3", "wym787878","ASIA");
-//		try {
-//			t.getConnect();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (NamingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		String rs = t.searchByFilter("pzbwv3", null);
-//		long t2 = Calendar.MILLISECOND;
-//		System.out.print("=======>T1:" + t1);
-//		System.out.print("=======>T2:" + t2);
-//		System.out.println("=======>TIME:" + (t2 - t1));
-//		System.out.println(rs);
-//	}
-//	//--------------------END-----------------------
+
+	public static void main(String[] args) {
+		long t1 = Calendar.MILLISECOND;
+		LdapConnector t = new LdapConnector("", "", "ASIA");
+		try {
+			t.getConnect();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String rs = t.searchByFilter("", null);
+		long t2 = Calendar.MILLISECOND;
+		System.out.println("=======>TIME:" + (t2 - t1));
+		System.out.println(rs);
+	}
+
 }
