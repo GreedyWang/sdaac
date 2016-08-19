@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="newsDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.News.News</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="commentsDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.News.Comments</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="newsManager" class="sdaac.wym.app.Service.news.NewsManager">
+		<property name="newsDao" ref="newsDao"></property>
+	</bean>
+	
+	<bean id="commentManager" class="sdaac.wym.app.Service.news.CommnetManager">
+		<property name="commentsDao" ref="commentsDao"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr
+	PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+	"http://getahead.org/dwr/dwr20.dtd" >
+<dwr>
+	   <allow>
+	    <create creator="spring" javascript="PPManager" >
+    	<param name="beanName" value="ppBiz"/>
+    	</create>    
+	    <create creator="spring" javascript="PuyerListBizManager" >
+    		<param name="beanName" value="PuyerListBiz"/>
+    	</create>
+    	
+    	<create creator="spring" javascript="AuthorizedFormManager" >
+    		<param name="beanName" value="AuthorizedFormBiz"/>
+    	</create> 
+    	  	
+    	 <create creator="spring" javascript="EmpManager" >
+    	<param name="beanName" value="empBiz"/>
+    	</create> 
+    	 <create creator="spring" javascript="PostManager" >
+    	<param name="beanName" value="postBiz"/>   	
+    	</create> 
+    	<create javascript="DepartmemntManager" creator="spring">
+    	<param name="beanName" value="departBiz"/>
+    	</create> 
+    	<create javascript="EmpIndexManager" creator="spring" >
+    	<param name="beanName" value="empindexBiz"/>
+    	</create>
+    	<create creator="spring" javascript="IndexManager">
+    	<param name="beanName" value="indexBiz" />
+    	</create>
+    	<create javascript="dpIndexManager" creator="spring">
+    	<param name="beanName" value="departIndexBiz"></param>
+    	</create>
+    	<create creator="spring" javascript="PostIDManager" >
+    	<param name="beanName" value="postIdBiz"/>
+    	</create>
+    	
+    	<create javascript="statisticsSchedule" creator="spring">
+    	<param name="beanName" value="statisticsScheduleBiz"></param>
+    	</create>
+    	
+  		<create javascript="projectSchedule" creator="spring">
+    	<param name="beanName" value="projectScheduleBiz"></param>
+    	</create>
+    	
+    	<create javascript="supplyService" creator="spring">
+    	<param name="beanName" value="supplyService"></param>
+    	</create>
+    	<create javascript="vaveInfoManager" creator="spring">
+    	<param name="beanName" value="vave_infoBiz"></param>
+    	</create>
+    	
+    	<create javascript="prFormListManager" creator="spring">
+    	<param name="beanName" value="prFormBiz"></param>
+    	</create>
+    	
+    	<create javascript="proposalManager" creator="spring">
+    	<param name="beanName" value="proposalBiz"></param>
+    	</create>
+    	
+    	<create javascript="ThemeManager" creator="spring">
+    	<param name="beanName" value="themeBiz"></param>
+    	</create>
+    	
+    	<create javascript="TaskManager" creator="spring">
+    	<param name="beanName" value="teamWorkProjectBiz"></param>
+    	</create>
+    	
+    	<create javascript="BIManager" creator="spring">
+    	<param name="beanName" value="biBiz"></param>
+    	</create>
+    	
+    	<create javascript="empIndexManager" creator="spring">
+    	<param name="beanName" value="empindexBiz"></param>
+    	</create>
+    	
+    	<create javascript="userRoleManager" creator="spring">
+    	<param name="beanName" value="userRoleBiz"></param>
+    	</create>
+    	
+    	<create javascript="osManager" creator="spring">
+    	<param name="beanName" value="osManager"></param>
+    	</create>
+		
+		<create javascript="mailManager" creator="spring">
+    	<param name="beanName" value="mailBiz"></param>
+    	</create> 
+		   	
+    	<create javascript="bpManager" creator="spring">
+    	<param name="beanName" value="bpBiz"></param>
+    	</create>
+    	
+    	<create javascript="bfManager" creator="spring">
+    	<param name="beanName" value="bfBiz"></param>
+    	</create>
+		
+		<create javascript="projectManager" creator="spring">
+    	<param name="beanName" value="teamWorkBiz"></param>
+    	</create>   	
+    	
+    	<create javascript="newsManager" creator="spring">
+    	<param name="beanName" value="newsManager"></param>
+    	</create>
+    	
+    	<create javascript="ogManager" creator="spring">
+    	<param name="beanName" value="organizationManager"></param>
+    	</create>
+    	
+    	<create javascript="goodsManager" creator="spring">
+    	<param name="beanName" value="goodsManager"></param>
+    	</create>
+    	
+    	<create javascript="teamWorkManager" creator="spring">
+    	<param name="beanName" value="teamWorkBiz"></param>
+    	</create>
+    	
+    	<create javascript="formService" creator="spring">
+    	<param name="beanName" value="formService"></param>
+    	</create>
+    	
+    	<create javascript="RoomManager" creator="spring">
+    	<param name="beanName" value="RoomManager"></param>
+    	</create>    	
+    	
+    	<create javascript="TempleteService" creator="spring">
+    	<param name="beanName" value="templeteService"></param>
+    	</create>
+    	
+	    <create javascript="IndicateService" creator="spring">
+    	<param name="beanName" value="indicateService"></param>
+    	</create>
+    	
+	    <create javascript="subjectDetailService" creator="spring">
+    	<param name="beanName" value="subjectDetailService"></param>
+    	</create>    	
+
+    	<create javascript="rejectTypeManager" creator="spring">
+    	<param name="beanName" value="rejectTypeManager"></param>
+    	</create> 
+    	
+    	<convert match="app.entity.epor.AuthorizedForm" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrBuyerList" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrRejectType" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.Service.vave.GoodsManager" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveTeamWork" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.entity.News.News" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.entity.News.Comments" converter="hibernate3"></convert>
+
+    	<convert match="sdaac.wym.app.entity.hr.Inbound" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveProposalState" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveProposalMore" converter="hibernate3"></convert>
+		<convert match="app.entity.vave.VaveTeamWork" converter="hibernate3"></convert>
+		<convert match="sdaac.wym.app.entity.hr.BounceFigure" converter="hibernate3"></convert>
+		<convert match="sdaac.wym.app.entity.hr.BouncePost" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.entity.hr.OrganizationStructure" converter="hibernate3"></convert>
+    	<convert match="common.entity.TuserRole" converter="hibernate3"></convert>
+    	<convert match="app.entity.TempIndex" converter="hibernate3"></convert>
+    	<convert match="app.entity.VaveTeamWorkProject" converter="hibernate3"></convert>
+    	<convert match="app.entity.Ttheme" converter="hibernate3"></convert>
+    	<convert match="app.entity.Tproposal" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrPrForm" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveStatisticsSchedule" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveProjectSchedule" converter="hibernate3"></convert>
+    	<convert match="app.entity.TindexTarget" converter="hibernate3"></convert>
+    	<convert match="app.entity.TemployeeProduct" converter="hibernate3"></convert>
+ 		<convert match="app.entity.Tuser" converter="hibernate3"></convert>
+ 		<convert match="app.entity.Tempolyee" converter="hibernate3"></convert>
+ 		<convert match="app.entity.Tpost" converter="hibernate3"></convert>
+ 		<convert match="app.entity.Tdepartment" converter="hibernate3"></convert>
+ 		<convert match="app.entity.TempIndex" converter="hibernate3"></convert>
+ 		<convert match="app.entity.TindexTarget" converter="hibernate3"></convert>
+ 		<convert match="app.entity.TpostId" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveInfo" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrBuyer" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrBuyContext" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrApprovedForm" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrBuyContext" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.Figure" converter="hibernate3"></convert>
+    	<convert match="app.entity.TeamWork" converter="hibernate3"></convert>
+    	<convert match="app.biz.impl.KpiAccount" converter="hibernate3"></convert>
+    	<convert match="app.entity.vave.VaveProposalStateId" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrProject" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.Subject" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrCostCenter" converter="hibernate3"></convert>
+    	<convert match="com.security.biz.impl.MailManager" converter="hibernate3"></convert>   	
+    	<convert match="app.entity.epor.PrBuyContext" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PrPrForm" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.Service.Room" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.Service.Room.Accessory" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.app.entity.dms.Templete" converter="hibernate3"></convert>
+    	<convert match="sdaac.wym.dms.entity.Indicate" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.SubjectDetail" converter="hibernate3"></convert>
+    	<convert match="app.entity.epor.PRSupply" converter="hibernate3"></convert>
+    	</allow>
+    	
+	<signatures>
+		<![CDATA[
+		import app.entity.epor.AuthorizedForm;
+		import app.entity.epor.SubjectDetail;
+		import app.entity.epor.PRSupply;
+		import sdaac.wym.dms.entity.Indicate;
+		import sdaac.wym.app.entity.dms.Templete;
+		import sdaac.wym.app.Service.Room.Accessory;
+		import sdaac.wym.app.Service.Room;
+		import app.entity.epor.PrPrForm;
+		import app.entity.epor.PrBuyContext;
+		import com.security.biz.impl.MailManager;
+		import app.entity.epor.PrCostCenter;
+		import app.entity.epor.Subject;	
+		import app.entity.epor.PrProject;	
+		import app.entity.vave.VaveProposalStateId;
+		import app.entity.vave.VaveTeamWork;
+		import sdaac.wym.app.entity.vave.Account;
+		import sdaac.wym.app.entity.vave.AccountGoods;
+		import sdaac.wym.app.entity.vave.Goods;
+		import app.biz.impl.KpiAccount;
+		import app.entity.TeamWork;
+
+		import sdaac.wym.app.entity.hr.Inbound;
+		improt app.entity.vave.VaveProposalMore;
+		import app.entity.vave.VaveProposalState
+		import app.entity.vave.Figure;
+		import app.entity.vave.VaveTeamWork;
+		import sdaac.wym.app.entity.hr.BouncePost;
+		import sdaac.wym.app.entity.hr.BounceFigure;
+		import sdaac.wym.app.entity.hr.OrganizationStructure;
+		import common.entity.TuserRole;
+		import app.entity.TempIndex;
+		import app.entity.epor.PrApprovedForm;
+		import app.entity.epor.PrBuyContext;
+		import app.entity.epor.PrBuyer;
+		import app.entity.epor.PrBuyContext;
+		import app.entity.VaveTeamWorkProject;
+		import app.entity.Ttheme;
+		import app.entity.Tproposal;
+		import app.entity.epor.PrPrForm;
+		import app.entity.vave.VaveInfo;
+		import app.entity.vave.VaveStatisticsSchedule;
+		import app.entity.vave.VaveProjectSchedule;
+		import app.entity.TindexTarget;
+		import app.entity.Tdepartment;
+		import app.entity.TemployeeProduct;
+		import app.entity.Tuser;
+		import app.entity.Tempolyee;
+		import app.entity.Tpost;
+		import app.entity.TempIndex;
+		import app.entity.TindexTarget;
+		import app.entity.TpostId;
+		]]>
+	</signatures>
+</dwr>

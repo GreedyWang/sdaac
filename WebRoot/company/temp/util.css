@@ -1,0 +1,25 @@
+
+/*注:这里的"b"元素,不是HTML的"b"标签,只相当于一个普通DIV*/
+body{
+	margin:20px 10px;
+	background-color: #FFF;
+	font:12px;
+}
+#vessel{/*容器DIV*/
+	width:800px;
+	background: #9BD1FA
+}
+b.rtop, b.rbottom{/*圆角矩形顶部和底部设置块状显示及背景颜色*/
+	display:block;
+	background: #fff;
+}
+b.rtop b, b.rbottom b{/*设置顶部和底部组成圆角的各元素块状显示和高度为1像素,及背景颜色,overflow为了适应IE6*/
+	display:block;
+	height: 1px;
+	overflow: hidden;
+	background: #9BD1FA
+}
+b.r1{margin: 0 5px}/*详细设置组成圆角元素长度差值,形成圆角视觉效果*/
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin:0 1px;height: 2px}/*圆角上半部分的最下元素和下半部分的最上元素,加高一像素为了平滑边缘*/

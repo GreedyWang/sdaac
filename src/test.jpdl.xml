@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="test" name="test" xmlns="http://jbpm.org/4.4/jpdl">
+	<!-- 
+	<mail name="rejectmail" template="my-template">
+		<transition g="613,165:-48,-22" name="to fill in" to="fill in"/>
+	</mail>
+	-->
+   
+   <start g="402,23,92,52" name="start1">
+      <transition name="next" to="fill in" g="-29,-22"/>
+   </start>
+
+   <task assignee="${approveMembers.owner}" form="/epor/approve/ordinaryApprove.jsp" g="378,122,92,52" name="fill in">
+      <transition g="-42,-22" name="next" to="DM"/>
+   </task>
+   
+   <task assignee="${approveMembers.dm}" form="/epor/approve/ordinaryApprove.jsp" g="429,290,92,52" name="DM">
+   	  <transition g="-35,-22" name="next" to="isCapital"/>
+      <transition g="613,165:-48,-22" name="to fill in" to="fill in"/>   
+        <!-- <transition g="613,165:-48,-22" name="to rejectmail" to="rejectmail"/>     -->  
+   </task>
+   
+   <!-- isCapial? -->
+   <decision g="483,374,48,48" name="isCapital">
+      <handler class="com.sdaac.pr.decision.IsCapitalDecisionHandler" />
+      <transition g="-97,-22" name="to capital_check" to="capital_check"/>
+      <transition g="-27,-43" name="to dpt Mgrs supervisor" to="dmsupervisor"/> 
+      <transition g="-92,3" name="to cost_center_owner" to="cost_center_owner"/>
+      <transition g="-92,3" name="to pm" to="pm"/>
+      <transition g="-92,3" name="to fin" to="finlv1"/>  
+   </decision>
+   
+   <task assignee="${approveMembers.capital}" g="295,380,92,52" name="capital_check">
+      <transition g="-40,-22" name="next" to="pm"/>
+      <transition g="-42,-22" name="to fill in" to="fill in"/>
+      <transition name="to fin" to="finlv1" g="-79,-22"/>
+   </task>
+   
+   <task assignee="${approveMembers.pm}" g="291,466,120,52" name="pm">
+      <transition g="-35,-22" name="next" to="finlv1"/>
+      <transition g="284,452;277,401;285,300:-42,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.supervisor}" g="671,365,92,52" name="dmsupervisor">
+      <transition g="15,-8" name="next" to="isCapital4DMsupervisor"/>
+      <transition g="1022,285;1045,96:-48,-22" name="to fill in" to="fill in"/>
+       <transition name="to fin" to="isCapital4DMsupervisor" g="-79,-22"/>
+   </task>
+   
+   <!-- step after DM supervisor , judge isCaptial or expense -->
+   <decision g="483,374,48,48" name="isCapital4DMsupervisor">
+      <handler class="com.sdaac.pr.decision.IsCapitalDecisionForDMSupervisorHandler" />
+      <transition g="15,-8" name="next" to="cost_center_owner"/>
+      <transition g="-97,-22" name="to capital_check" to="capital_check"/>
+      <transition g="1022,285;1045,96:-48,-22" name="to fill in" to="fill in"/>
+      <transition name="to fin" to="finlv1" g="-79,-22"/>
+      <transition g="-92,3" name="to pm" to="pm"/> 
+      <transition g="15,-8" name="to cost_center_owner" to="cost_center_owner"/>
+   </decision>
+	
+  <decision g="483,374,48,48" name="isCapital4DMsupervisor2">
+      <handler class="com.sdaac.pr.decision.IsCapitalDecisionForDMSupervisorHandler" />
+      <transition g="15,-8" name="next" to="cost_center_owner"/>
+      <transition g="-97,-22" name="to capital_check" to="capital_check"/>
+      <transition g="1022,285;1045,96:-48,-22" name="to fill in" to="fill in"/>
+      <transition name="to fin" to="finlv1" g="-79,-22"/>
+      <transition g="-92,3" name="to pm" to="pm"/> 
+      <transition g="15,-8" name="to cost_center_owner" to="cost_center_owner"/>
+   </decision>	
+   
+   <task assignee="${approveMembers.ccowner}" g="635,454,120,52" name="cost_center_owner">
+      <transition g="-35,-22" name="next" to="finlv1"/>
+      <transition g="1013,360;1053,82;690,117:-42,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <decision g="483,374,48,48" name="finlv1">
+      <handler class="com.sdaac.pr.decision.FinLvDescisionHandler" />
+      <transition g="-97,-22" name="to proctrl" to="proctrl"/>
+      <transition g="-27,-43" name="to fin" to="fin"/> 
+   </decision>
+   
+   <!-- new role {lv1 fin} -->
+   <task assignee="${approveMembers.finlv1}" form="/epor/approve/cwControlApprove.jsp" g="541,606,92,52" name="proctrl">
+      <transition g="-64,-22" name="next" to="fin"/>
+      <transition g="390,625;254,521;261,305:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.fin}" form="/epor/approve/cwControlApprove.jsp" g="541,606,92,52" name="fin">
+      <transition g="-64,-22" name="next" to="finNextLvHandler"/>
+      <transition g="390,625;254,521;261,305:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <decision g="817,742,48,48" name="finNextLvHandler">
+      <handler class="com.sdaac.pr.decision.NextLevelFinDecisionHandler"/>
+      <transition g="11,-8" name="to finNextLv" to="finNextLv"/>
+      <transition g="-45,-1" name="to fin Mgr" to="fin Mgr"/>
+   </decision>
+   
+   <!-- new role: Fin next level -->
+   <task assignee="${approveMembers.finNextLv}" form="/epor/approve/cwControlApprove.jsp" g="541,606,92,52" name="finNextLv">
+      <transition g="-64,-22" name="next" to="fin Mgr"/>
+      <transition g="390,625;254,521;261,305:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.finMgr}" g="545,678,92,52" name="fin Mgr">
+      <transition g="-52,-22" name="next" to="cost1"/>
+      <transition g="1000,413;1016,126:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <decision g="817,742,48,48" name="cost1">
+      <handler class="com.sdaac.pr.decision.Cost1DecisionHandler" />
+      <transition g="11,-8" name="to Plant_Mgr" to="Plant_Mgr"/>
+      <transition g="-45,-1" name="to Eng Dr/DGM" to="Eng Dr/DGM"/>
+      <transition g="1109,769;1101,1056:-50,-22" name="toEnd" to="Fin_check"/>
+      <transition g="1109,769;1101,1056:-50,-22" name="to GM" to="GM"/>
+   </decision>
+   
+   <task assignee="${approveMembers.plantMgr}" g="801,813,92,52" name="Plant_Mgr">
+   		<transition g="-27,-1" name="next" to="plantMgrDecision"/>
+      <transition g="690,904;512,764;225,528;226,422;230,282:-48,-22" name="to fill in" to="fill in"/>
+
+   </task>
+   
+   <decision g="827,886,48,48" name="plantMgrDecision">
+      <handler class="com.sdaac.pr.decision.PlantMgrDecisionHandler" />
+	   <transition g="-31,29" name="to Eng Dr/DGM" to="Eng Dr/DGM"/>
+	   <transition g="19,-12" name="to GM" to="GM"/>
+	   <transition g="19,-12" name="next" to="Fin_check"/>
+   </decision>
+   
+   <task assignee="${approveMembers.DGM}" g="685,946,92,52" name="Eng Dr/DGM">
+      <transition g="-47,-11" name="next" to="cost2"/>
+      <transition g="436,753;202,545;197,258:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.GM}" g="894,1106,92,52" name="GM">
+      <transition g="-68,-22" name="next" to="thremalDecision"/>
+      <transition g="1068,62:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <decision g="734,1046,48,48" name="cost2">
+   	  <handler class="com.sdaac.pr.decision.Cost2DecisionHandler" />
+      <transition g="-42,-22" name="to GM" to="GM"/>
+      <transition g="-96,-22" name="to Thermal" to="Thermal"/>
+      <transition g="-50,-22" name="toEnd" to="Fin_check"/>
+   </decision>
+   
+   <!-- GM to Thremal -->
+   <decision g="734,1046,48,48" name="thremalDecision">
+   	  <handler class="com.sdaac.pr.decision.ThremalDecisionHandler" />
+      <transition g="-96,-22" name="to Thermal" to="Thermal"/>
+      <transition g="-50,-22" name="toEnd" to="Fin_check"/>
+   </decision>
+   
+   <task assignee="${approveMembers.thermal}" g="830,1199,92,52" name="Thermal">
+      <transition g="-75,-22" name="next" to="Fin_check"/>
+      <transition g="645,1068;489,893;177,557;166,238:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <end g="827,1520,92,52" name="end1"/>
+   
+   <task assignee="${approveMembers.fin_check}" g="814,1290,92,52" form="/epor/approve/feedbackApprove.jsp" name="Fin_check">
+      <transition g="-80,-22" name="next" to="PCL_check"/>
+      <transition g="143,568;130,213:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.PCL_check}" form="/epor/approve/PCLApprove.jsp" g="809,1360,92,52" name="PCL_check">
+      <transition g="-92,-22" name="next" to="Buyer_check"/>
+      <transition g="70,563;61,148:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+   <task assignee="${approveMembers.buyer_check}" form="/epor/approve/BuyerWritePN.jsp" g="807,1443,92,52" name="Buyer_check">
+      <transition g="-50,-22" name="next" to="end1"/>
+      <transition g="101,578;85,177:-48,-22" name="to fill in" to="fill in"/>
+   </task>
+   
+</process>

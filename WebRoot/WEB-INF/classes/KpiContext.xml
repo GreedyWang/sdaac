@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--  -->
+	<bean id="empindexdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TempIndex</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="departdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.Tdepartment</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="indexdao" class="app.hr.DAO.IndexDao" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TindexTarget</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="departIndexStatedao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.hr.DepartmentState</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="departIndexStateManager"
+		class="sdaac.wym.app.Hr.DepartmentIndexStateManager">
+		<property name="departmentStateDao" ref="departIndexdao"></property>
+	</bean>
+
+	<bean id="departIndexdao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TcompanyIndex</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="dpIndexdao" class="app.hr.DAO.DepartIndexDao"
+		parent="dao">
+
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TcompanyIndex</value>
+		</constructor-arg>
+
+	</bean>
+
+	<bean id="indexBiz" class="app.biz.impl.IndexTargetBizImpl">
+		<property name="indexdao" ref="indexdao"></property>
+		<property name="dpIndexDao" ref="dpIndexdao"></property>
+		<property name="empIndexDao" ref="empindexdao"></property>
+	</bean>
+	
+	<bean id="empindexBiz" class="app.biz.impl.EmpIndexBizImpl">
+		<property name="empIndexdao" ref="empindexdao"></property>
+		<property name="indexdao" ref="indexdao"></property>
+		<property name="departIndexdao" ref="departIndexdao"></property>
+		<property name="indexBiz" ref="indexBiz"></property>
+	</bean>
+	
+	<bean id="departIndexBiz"
+		class="app.biz.impl.DepartmentIndexBizImpl">
+		<property name="departIndexdao" ref="departIndexdao"></property>
+		<property name="departdao" ref="departdao"></property>
+		<property name="empdao" ref="empdao"></property>
+		<property name="empIndexdao" ref="empindexdao"></property>
+		<property name="indexdao" ref="indexdao"></property>
+	</bean>
+	
+		<bean id="KPIManager"
+		class="sdaac.wym.app.Service.KPI.KPIManager">
+		<property name="empIndexBiz" ref="empindexBiz"></property>
+		<property name="empBiz" ref="empBiz"></property>
+	</bean>
+</beans>

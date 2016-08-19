@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Table排序</title>
+</head>
+<body>
+<style type="text/css">
+.fu_list{ width:500px; border:1px solid #ebebeb;line-height:20px; font-size:12px;}
+.fu_list thead td{background-color:#ebebeb;}
+.fu_list td{padding:5px;}
+.fu_list a{outline:none;/*ff*/hide-focus:expression(this.hideFocus=true);/*ie*/}
+.fu_list a:link, .fu_list a:visited, .fu_list a:hover, .fu_list a:active{text-decoration:none;color:#333;}
+.fu_list thead a{padding-right:15px;}
+.fu_list thead a.up, .fu_list thead a.down{ background:url(http://www.fs12345.com/upphoto/cloud/5a539829-d9b9-4437-bc9c-20b32f1fc4b7.gif) right center no-repeat; }
+.fu_list thead a.down{background-image:url(http://www.fs12345.com/upphoto/cloud/76a4b69b-38b8-4abd-8a58-82d2ade8d526.gif);}
+</style>
+<table border="0" cellspacing="0" cellpadding="0" class="fu_list" id="idTable">
+  <thead>
+    <tr>
+      <td>&nbsp;<a href="javascript:void(0)" id="idTitle">名称</a> / <a href="javascript:void(0)" id="idExt">类型</a></td>
+      <td width="150" align="center"><a href="javascript:void(0)" id="idAddtime" class="up">上传时间</a></td>
+      <td width="50" align="center"><a href="javascript:void(0)" id="idSize">大小</a></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td _ext="rar">new.rar</td>
+      <td align="center" _order="2008/9/12 8:51:09">2008-9-12 8:51:09</td>
+      <td align="right" _order="433247">423.09 K</td>
+    </tr>
+    <tr>
+      <td _ext="js">Scroller.js</td>
+      <td align="center" _order="2008/9/23 11:26:57">2008-9-23 11:26:57</td>
+      <td align="right" _order="2556">2.5 K</td>
+    </tr>
+    <tr>
+      <td _ext="js">AlertBox.js</td>
+      <td align="center" _order="2008/9/23 11:26:57">2008-9-23 11:26:57</td>
+      <td align="right" _order="3565">3.48 K</td>
+    </tr>
+    <tr>
+      <td _ext="htm">1.htm</td>
+      <td align="center" _order="2008/10/4 20:21:54">2008-10-4 20:21:54</td>
+      <td align="right" _order="11394">11.13 K</td>
+    </tr>
+    <tr>
+      <td _ext="htm">4.htm</td>
+      <td align="center" _order="2008/10/4 20:21:54">2008-10-4 20:21:54</td>
+      <td align="right" _order="351">351 b</td>
+    </tr>
+    <tr>
+      <td _ext="xml">news.xml</td>
+      <td align="center" _order="2008/10/4 20:24:11">2008-10-4 20:24:11</td>
+      <td align="right" _order="14074">13.74 K</td>
+    </tr>
+    <tr>
+      <td _ext="js">function.js</td>
+      <td align="center" _order="2008/10/4 20:24:11">2008-10-4 20:24:11</td>
+      <td align="right" _order="2844">2.78 K</td>
+    </tr>
+    <tr>
+      <td _ext="mp3">神秘园 - Nocturne.mp3</td>
+      <td align="center" _order="2008/10/7 0:07:43">2008-10-7 0:07:43</td>
+      <td align="right" _order="3111293">2.97 M</td>
+    </tr>
+    <tr>
+      <td _ext="doc">详细功略+剧情流程（一）.doc</td>
+      <td align="center" _order="2008/10/7 0:07:43">2008-10-7 0:07:43</td>
+      <td align="right" _order="63488">62 K</td>
+    </tr>
+    <tr>
+      <td _ext="doc">详细功略+剧情流程（二）.doc</td>
+      <td align="center" _order="2008/10/7 0:07:54">2008-10-7 0:07:54</td>
+      <td align="right" _order="164352">160.5 K</td>
+    </tr>
+    <tr>
+      <td _ext="txt">禁止文件预览功能.txt</td>
+      <td align="center" _order="2008/10/7 0:07:58">2008-10-7 0:07:58</td>
+      <td align="right" _order="860">860 b</td>
+    </tr>
+  </tbody>
+</table>
+<input name="" type="button" value="有x的排前面" id="idBtn" />
+<script type="text/javascript">
+var $ = function (id) {
+    return "string" == typeof id ? document.getElementById(id) : id;
+};
+var Class = {
+  create: function() {
+    return function() {
+      this.initialize.apply(this, arguments);
+    }
+  }
+}
+Object.extend = function(destination, source) {
+	for (var property in source) {
+		destination[property] = source[property];
+	}
+	return destination;
+}
+
+Function.prototype.bind = function(object) {
+  var __method = this, args = Array.prototype.slice.call(arguments); args.shift();
+  return function() {
+	return __method.apply(object, args.concat(Array.prototype.slice.call(arguments)));
+  }
+}
+
+function Each(list, fun){
+	for (var i = 0, len = list.length; i < len; i++) { fun(list[i], i); }
+};
+
+
+var TableOrder = Class.create();
+TableOrder.prototype = {
+  initialize: function(table) {
+	this.tBody = $(table).tBodies[0];//tbody对象
+	this.Rows = [];//行集合
+	this._order = null;//排序对象
+	
+	Each(this.tBody.rows, function(o){ this.Rows.push(o); }.bind(this));
+  },
+  //排序并显示
+  Sort: function() {
+	//没有排序对象返回
+	if(!this._order){ return false };
+	//排序
+	this.Rows.sort(this._order.Compare || this.Compare.bind(this));
+	this._order.Down && this.Rows.reverse();//取反
+	//显示表格
+	var oFragment = document.createDocumentFragment();
+	Each(this.Rows, function(o){ oFragment.appendChild(o); });
+	this.tBody.appendChild(oFragment);
+	//执行附加函数
+	this._order.onSort();
+  },
+  //比较函数
+  Compare: function(o1, o2) {
+	var value1 = this.GetValue(o1), value2 = this.GetValue(o2);
+	return value1 < value2 ? -1 : value1 > value2 ? 1 : 0;
+  },
+  //获取比较值
+  GetValue: function(tr) {
+	var td = tr.getElementsByTagName("td")[this._order.Index], data = td[this._order.Attri] || td.getAttribute(this._order.Attri);
+	
+	//数据转换
+	switch (this._order.DataType.toLowerCase()) {
+		case "int":
+			return parseInt(data) || 0;
+		case "float":
+			return parseFloat(data) || 0;
+		case "date":
+			return Date.parse(data) || 0;
+		case "string":
+		default:
+			return data.toString() || "";
+	}
+  },
+  //添加并返回一个排序对象
+  Add: function(index, options) {
+	var oThis = this;
+	return new function(){
+		//默认属性
+		this.Attri = "innerHTML";//获取数据的属性
+		this.DataType = "string";//比较的数据类型
+		this.Down = true;//是否按顺序
+		this.onSort = function(){};//排序时执行
+		this.Compare = null;//自定义排序函数
+		Object.extend(this, options || {});
+		//td索引
+		this.Index = index;
+		this.Sort = function(){ oThis._order = this; oThis.Sort(); };
+	};
+  }
+}
+
+var to = new TableOrder("idTable");
+function SetOrder(obj, index, options){
+	var o = $(obj);
+	//_arr是记录排序项目（这里主要用来设置样式）
+	!SetOrder._arr && (SetOrder._arr = []); SetOrder._arr.push(o);
+	//添加一个排序对象
+	var order = to.Add(index, options);
+	order.onSort = function(){
+		//设置样式
+		Each(SetOrder._arr, function(o){ o.className = ""; });
+		o.className = order.Down ? "down" : "up";
+		//取相反排序
+		order.Down = !order.Down
+	}
+	o.onclick = function(){ order.Sort(); return false; }
+}
+SetOrder("idTitle", 0);
+SetOrder("idExt", 0, { Attri: "_ext" });
+SetOrder("idAddtime", 1, { Attri: "_order", DataType: "date" });
+SetOrder("idSize", 2, { Attri: "_order", DataType: "int" });
+
+var order2 = to.Add(0, {
+	onSort: function(){ Each(SetOrder._arr, function(o){ o.className = ""; }); },
+	Compare: function(o1, o2) {
+		var value1 = /x/i.test(to.GetValue(o1)), value2 = /x/i.test(to.GetValue(o2));
+		return value1 && !value2 ? 1 : !value1 && value2 ? -1 : 0;
+	}
+});
+$("idBtn").onclick = function(){ order2.Sort(); }
+</script>
+</body>
+</html>

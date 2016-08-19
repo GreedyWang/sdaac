@@ -1,0 +1,27 @@
+.p1 {
+	FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: "宋体"; LETTER-SPACING: 0.1em; TEXT-DECORATION: none
+}
+.p9 {
+	FONT-SIZE: 9pt; COLOR: #3366cc; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:link {
+	FONT-SIZE: 9pt; COLOR: #2b53a8; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 9pt; COLOR: #2b53a8; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 9pt; COLOR: #ff9900; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: #ff9900; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+.p92 {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15pt; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.p3 {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 16pt; FONT-FAMILY: "宋体"
+}
+.po9 {
+	FONT-SIZE: 9pt; COLOR: #0000ff; LINE-HEIGHT: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}

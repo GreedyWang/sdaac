@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd ">
+	
+	<!-- 定义事务管理器 -->
+	<bean id="myTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 2.x 声明式事务代理模板 -->
+	<tx:advice id="txAdvice"
+		transaction-manager="myTransactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="do*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="bizMethods"
+			expression="execution(* app.biz.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" />
+	</aop:config>
+	<aop:config>
+		<aop:pointcut id="bizMethodsVAVE"
+			expression="execution(* app.biz.vave.impl.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethodsVAVE" />
+	</aop:config>
+	
+	
+	<!-- aop日志，安全认证 -->
+	<aop:config>
+		
+		<aop:aspect id="securityAspect" ref="Mysecurity" >
+		<aop:pointcut id="securtiy"
+			expression="execution(* app.biz.impl.*.*(..))" />
+			<aop:before pointcut-ref="securtiy" method="before"/>
+		</aop:aspect>
+	</aop:config>
+	<!-- 我的安全方法,读acl,check -->
+	<bean id="Mysecurity"
+		class="common.util.Mysecurity">
+	</bean>
+</beans>
+
+

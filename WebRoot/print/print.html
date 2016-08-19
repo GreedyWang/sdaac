@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<!-- 要保留打印区域的样式，此页面的样式必需与父页面的一样 -->
+<style type="text/css">
+<!--
+.STYLE1 {}{color: #FFFFFF}
+body,td,th {}{
+    font-size: 12px;
+}
+.STYLE4 {}{color: #CC0000; font-weight: bold; }
+
+-->
+    </style>
+<script>
+//初始化页面大小
+window.resizeTo(window.screen.availWidth,window.screen.availHeight);
+window.moveTo(0,0);
+</script>
+<body style="background-color:White; background-image:url(nono.jpg); ">
+    
+    <!--注册打印控件-->
+    <object id="WebBrowser" classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0" width="0"></object>
+    
+    <!--设置打印标题-->
+    <div id="title" class="STYLE4">
+    </div>
+    <br />
+    
+    <!--设置打印的内容-->
+    <div id="print">
+    </div>
+
+    <script>
+ 
+//从父页面获取内容
+ var father = window.opener;
+ if(father != null)
+ {
+    pagesetup_null();
+    //获取父页面的标题
+    document.getElementById('title').innerHTML =  father.title.innerHTML;
+    //获取父页面需要打印的内容
+    document.getElementById('print').innerHTML =  father.Content1.innerHTML;  
+    print();
+  }
+ 
+  function print()
+  {
+    document.all.WebBrowser.ExecWB(7,1);
+    window.close();
+  }
+
+    </script>
+
+</body>
+</html>

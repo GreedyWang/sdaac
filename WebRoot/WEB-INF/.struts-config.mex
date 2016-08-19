@@ -1,0 +1,1661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="50,50" dimension="244,84" />
+  <StrutsActivity path="/employee.do" location="50,250" dimension="262,84" />
+  <StrutsActivity path="/post.do" location="950,350" dimension="238,84" />
+  <StrutsActivity path="/personal.do" location="350,550" dimension="262,84" />
+  <StrutsActivity path="/index.do" location="350,750" dimension="244,84" />
+  <StrutsActivity path="/dindex.do" location="350,1950" dimension="265,88" />
+  <StrutsActivity path="/chejianjiangjin.do" location="2750,2050" dimension="304,84" />
+  <StrutsActivity path="/departIndex.do" location="650,750" dimension="280,84" />
+  <StrutsActivity path="/user.do" location="50,850" dimension="202,88" />
+  <StrutsActivity path="/employeeProduct.do" location="1550,550" dimension="263,88" />
+  <StrutsActivity path="/proposal.do" location="50,1050" dimension="221,88" />
+  <StrutsActivity path="/mainSuggestion.do" location="1850,150" dimension="255,88" />
+  <StrutsActivity path="/otherSuggestion.do" location="1850,1050" dimension="261,88" />
+  <StrutsActivity path="/empIndex.do" location="1550,1150" dimension="228,88" />
+  <StrutsActivity path="/companySuggestion.do" location="2150,1250" dimension="278,88" />
+  <StrutsActivity path="/task.do" location="350,1350" dimension="202,88" />
+  <StrutsActivity path="/statistics.do" location="1850,1350" dimension="223,88" />
+  <StrutsActivity path="/epor.do" location="1250,1450" dimension="202,88" />
+  <StrutsActivity path="/vaveInfo.do" location="2450,1450" dimension="224,88" />
+  <StrutsActivity path="/rights.do" location="2750,1250" dimension="210,88" />
+  <StrutsActivity path="/oS.do" location="2750,1050" dimension="194,88" />
+  <StrutsActivity path="/figureAndPostId.do" location="2750,150" dimension="260,88" />
+  <StrutsActivity path="/plm.do" location="3050,1150" dimension="216,88" />
+  <StrutsActivity path="/cw.do" location="950,1750" dimension="195,88" />
+  <StrutsActivity path="/audit.do" location="3350,1350" dimension="205,88" />
+  <StrutsActivity path="/news.do" location="3350,1750" dimension="68,62" />
+  <StrutsActivity path="/menu.do" location="3350,350" dimension="206,88" />
+  <StrutsActivity path="/businessTopic.do" location="3650,1450" dimension="274,88" />
+  <StrutsActivity path="/account.do" location="2450,1950" dimension="219,88" />
+  <StrutsActivity path="/goods.do" location="50,2050" dimension="238,88" />
+  <StrutsActivity path="/roomSystem.do" location="3350,2050" dimension="274,84" />
+  <StrutsActivity path="/labAction.do" location="3950,2150" dimension="292,84" />
+  <StrutsActivity path="/mainData.do" location="650,2250" dimension="340,84" />
+  <StrutsActivity path="/sap.do" location="4250,1550" dimension="232,84" />
+  <StrutsActivity path="/dMS.do" location="3950,250" dimension="268,84" />
+  <StrutsActivity path="/Mainframe_vave.jsp" location="1550,150" dimension="131,49" />
+  <StrutsActivity path="/welcome/Login.jsp" location="3050,550" dimension="121,49" />
+  <StrutsActivity path="/epor/Login.jsp" location="3950,1850" dimension="130,48" />
+  <StrutsActivity path="/index.jsp" location="650,450" dimension="100,48" />
+  <StrutsActivity path="/frontIndex/index.jsp" location="3050,450" dimension="133,49" />
+  <StrutsActivity path="/company/personal/ControlPanel.jsp" location="3350,550" dimension="204,49" />
+  <StrutsActivity path="/form/login.jsp" location="350,50" dimension="130,48" />
+  <StrutsActivity path="/Manager/EmpAdd.jsp" location="2450,250" dimension="136,49" />
+  <StrutsActivity path="/DMS/emp/EmpManager.jsp" location="3650,350" dimension="178,48" />
+  <StrutsActivity path="/Manager/EmpManager.jsp" location="950,950" dimension="159,49" />
+  <StrutsActivity path="/index/DepartmentIndexShow_selectEmp.jsp" location="1550,250" dimension="246,49" />
+  <StrutsActivity path="/admin/teamWork.jsp" location="3350,250" dimension="132,49" />
+  <StrutsActivity path="/vave/util/ShowEmpUid.jsp" location="3050,350" dimension="158,49" />
+  <StrutsActivity path="/DMS/emp/EmpAdd.jsp" location="2450,2250" dimension="154,48" />
+  <StrutsActivity path="/front/hrpost/PostAdd.jsp" location="3650,250" dimension="154,49" />
+  <StrutsActivity path="/front/hrpost/PostUpdate.jsp" location="2750,650" dimension="170,49" />
+  <StrutsActivity path="/Manager/PostSalaryConstruct.jsp" location="350,950" dimension="195,49" />
+  <StrutsActivity path="/front/hrpost/PostManager.jsp" location="950,1650" dimension="177,49" />
+  <StrutsActivity path="/form/post.jsp" location="50,450" dimension="124,48" />
+  <StrutsActivity path="/front/PersonalEffectRegisterByExcel.jsp" location="1250,750" dimension="226,49" />
+  <StrutsActivity path="/front/bounce/PostBounceRegister.jsp" location="2750,1550" dimension="214,49" />
+  <StrutsActivity path="/salary/pp.jsp" location="50,750" dimension="124,48" />
+  <StrutsActivity path="/front/PersonalEffectSelect.jsp" location="1250,950" dimension="178,49" />
+  <StrutsActivity path="/salary/AccountTypeTime.jsp" location="650,1550" dimension="169,49" />
+  <StrutsActivity path="/salary/PostSalary.jsp" location="950,650" dimension="172,48" />
+  <StrutsActivity path="/front/PersonalEffectRegister.jsp" location="1250,850" dimension="189,49" />
+  <StrutsActivity path="/right.jsp" location="1250,450" dimension="73,49" />
+  <StrutsActivity path="/form/personal.jsp" location="950,550" dimension="148,48" />
+  <StrutsActivity path="/index/everyDepartmentEmpIndexShow_justlook.jsp" location="950,1250" dimension="283,49" />
+  <StrutsActivity path="/index/show/ManagerIndexAdd.jsp" location="2750,350" dimension="199,49" />
+  <StrutsActivity path="/index/everyDepartmentEmpIndexShow.jsp" location="2150,950" dimension="240,49" />
+  <StrutsActivity path="/index/departEmpIndex/scoreSelfDempEmpIndexs.jsp" location="3650,450" dimension="289,49" />
+  <StrutsActivity path="/index/CompanyIndexAdd.jsp" location="1850,850" dimension="173,49" />
+  <StrutsActivity path="/index/EmpIndexAdd.jsp" location="350,1550" dimension="148,49" />
+  <StrutsActivity path="/index/UpdateIndex.jsp" location="2750,550" dimension="144,49" />
+  <StrutsActivity path="/index/show/EmpIndexShow.jsp" location="2750,450" dimension="184,49" />
+  <StrutsActivity path="/index/departEmpIndex/addSelfDempEmpIndexs.jsp" location="3050,650" dimension="281,49" />
+  <StrutsActivity path="/index/CompanyIndexShow.jsp" location="1850,350" dimension="180,49" />
+  <StrutsActivity path="/index/DepartmentIndexAdd.jsp" location="1550,450" dimension="185,49" />
+  <StrutsActivity path="/index/EmpIndexScore.jsp" location="3650,550" dimension="156,49" />
+  <StrutsActivity path="/front/overtime.jsp" location="1850,2050" dimension="154,48" />
+  <StrutsActivity path="/index/show/DepartmentIndexShow.jsp" location="2750,950" dimension="221,49" />
+  <StrutsActivity path="/index/MyCompanyIndex_justlook.jsp" location="2150,450" dimension="211,49" />
+  <StrutsActivity path="/index/DepartmentIndexShow_selectDepart.jsp" location="950,1150" dimension="259,49" />
+  <StrutsActivity path="/index/MyCompanyIndex.jsp" location="1550,350" dimension="168,49" />
+  <StrutsActivity path="/index/EachDepartInsert.jsp" location="1550,950" dimension="166,49" />
+  <StrutsActivity path="/test.jsp" location="1250,550" dimension="70,49" />
+  <StrutsActivity path="/form/employeeProduct.jsp" location="1550,750" dimension="160,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm_demo.jsp" location="650,1050" dimension="207,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm.jsp" location="2450,450" dimension="175,49" />
+  <StrutsActivity path="/vave/The Department/VAVE_proposalForm_state1.jsp" location="650,1450" dimension="294,49" />
+  <StrutsActivity path="/vave/Proposal_approval_Select3.jsp" location="1550,1050" dimension="209,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm_demo_OutShow.jsp" location="2150,650" dimension="257,49" />
+  <StrutsActivity path="/vave/newTask/finishedProject.jsp" location="2150,1950" dimension="196,49" />
+  <StrutsActivity path="/vave/Select_Form.jsp" location="350,1050" dimension="138,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm_state0.jsp" location="2150,750" dimension="212,49" />
+  <StrutsActivity path="/vave/task/ProposalDetails_taskShow.jsp" location="2450,950" dimension="228,49" />
+  <StrutsActivity path="/vave/newTask/createProject.jsp" location="2750,750" dimension="190,49" />
+  <StrutsActivity path="/vave/Proposal_approval_Select.jsp" location="1250,1050" dimension="203,49" />
+  <StrutsActivity path="/vave/Outside the department/VAVE_proposalForm_state2.jsp" location="1250,1350" dimension="331,49" />
+  <StrutsActivity path="/vave/Statistics/AllTopic.jsp" location="3650,650" dimension="162,49" />
+  <StrutsActivity path="/vave/Proposal_approval_Select2.jsp" location="1850,450" dimension="209,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm_demo_selfShow.jsp" location="2150,550" dimension="256,49" />
+  <StrutsActivity path="/vave/Company/VAVE_proposalForm_state3.jsp" location="2450,850" dimension="261,49" />
+  <StrutsActivity path="/form/mainSuggestion.jsp" location="1850,750" dimension="152,49" />
+  <StrutsActivity path="/form/otherSuggestion.jsp" location="350,1150" dimension="156,49" />
+  <StrutsActivity path="/index/empIndexShow.jsp" location="350,1250" dimension="155,49" />
+  <StrutsActivity path="/index/KpiState.jsp" location="3050,1850" dimension="121,49" />
+  <StrutsActivity path="/index/empIndexShowR.jsp" location="1850,1250" dimension="162,49" />
+  <StrutsActivity path="" location="650,250" dimension="40,48" />
+  <StrutsActivity path="/form/empIndex.jsp" location="50,1250" dimension="125,49" />
+  <StrutsActivity path="/form/companySuggestion.jsp" location="50,1350" dimension="173,49" />
+  <StrutsActivity path="/vave/Statistics/projectList.jsp" location="3950,1750" dimension="176,49" />
+  <StrutsActivity path="/vave/task/MyTasksList.jsp" location="1550,1850" dimension="160,49" />
+  <StrutsActivity path="/vave/newTask/AddMembers.jsp" location="1850,1650" dimension="187,49" />
+  <StrutsActivity path="/vave/task/MyControlTaskList.jsp" location="2450,750" dimension="190,49" />
+  <StrutsActivity path="/vave/newTask/changManager.jsp" location="3050,750" dimension="196,49" />
+  <StrutsActivity path="/form/task.jsp" location="1850,1850" dimension="97,49" />
+  <StrutsActivity path="/vave/Statistics/department.jsp" location="2450,1150" dimension="182,49" />
+  <StrutsActivity path="/vave/Statistics/appraveRate.jsp" location="3950,950" dimension="232,48" />
+  <StrutsActivity path="/vave/Statistics/rate.jsp" location="3650,850" dimension="146,49" />
+  <StrutsActivity path="/form/statistics.jsp" location="50,1450" dimension="119,49" />
+  <StrutsActivity path="/epor/showPrFormTip.jsp" location="3950,1050" dimension="150,49" />
+  <StrutsActivity path="/epor/approve/buyerConfirm.jsp" location="3650,750" dimension="186,49" />
+  <StrutsActivity path="/mobile/showPrFormTip.jsp" location="4250,750" dimension="190,48" />
+  <StrutsActivity path="/epor/Print.jsp" location="3950,850" dimension="99,49" />
+  <StrutsActivity path="/epor/showPrForm.jsp" location="2150,1450" dimension="136,49" />
+  <StrutsActivity path="/epor/updatePrForm.jsp" location="3950,750" dimension="145,49" />
+  <StrutsActivity path="/epor/processImg.jsp" location="3650,2250" dimension="159,53" />
+  <StrutsActivity path="/epor/baseInfo/UpdateSubject.jsp" location="3950,1350" dimension="232,48" />
+  <StrutsActivity path="/epor/baseInfo/UpdateProject.jsp" location="3950,1950" dimension="232,48" />
+  <StrutsActivity path="/epor/success.html" location="3350,750" dimension="120,49" />
+  <StrutsActivity path="/epor/adminupdatePrForm.jsp" location="4250,850" dimension="209,53" />
+  <StrutsActivity path="/form/epor.jsp" location="1550,1450" dimension="99,49" />
+  <StrutsActivity path="/vave/baseInfo/AnnSale.jsp" location="50,1950" dimension="165,49" />
+  <StrutsActivity path="/form/vaveInfo.jsp" location="50,1550" dimension="121,49" />
+  <StrutsActivity path="/rights/EmpRightManager.jsp" location="1550,1550" dimension="169,49" />
+  <StrutsActivity path="/form/rights.jsp" location="2750,1450" dimension="104,49" />
+  <StrutsActivity path="/admin/OsManager.jsp" location="2150,1550" dimension="138,49" />
+  <StrutsActivity path="/form/oS.jsp" location="1850,1550" dimension="89,49" />
+  <StrutsActivity path="/front/hrpost/th/FigureAccount.jsp" location="650,1750" dimension="197,49" />
+  <StrutsActivity path="/front/hrpost/gx/BouncePostupdate.jsp" location="50,1750" dimension="220,49" />
+  <StrutsActivity path="/front/hrpost/th/FigureInbounds.jsp" location="3350,1250" dimension="203,49" />
+  <StrutsActivity path="/front/hrpost/gx/Padd.jsp" location="350,1750" dimension="154,49" />
+  <StrutsActivity path="/front/hrpost/th/FigureManager.jsp" location="1850,1750" dimension="200,49" />
+  <StrutsActivity path="/front/hrpost/addExcel1.jsp" location="3350,850" dimension="163,49" />
+  <StrutsActivity path="/front/hrpost/addExcel2.jsp" location="3350,950" dimension="163,49" />
+  <StrutsActivity path="/front/hrpost/addExcel3.jsp" location="3350,1050" dimension="163,49" />
+  <StrutsActivity path="/front/hrpost/addExcel0.jsp" location="3350,1150" dimension="163,49" />
+  <StrutsActivity path="/form/figureAndPostId.jsp" location="50,1650" dimension="155,49" />
+  <StrutsActivity path="/plm/showDetails.jsp" location="2150,1650" dimension="128,49" />
+  <StrutsActivity path="/plm/MpartTreeShow.jsp" location="3050,1550" dimension="147,49" />
+  <StrutsActivity path="/plm/plm.jsp" location="3050,1450" dimension="87,49" />
+  <StrutsActivity path="/cw/log.jsp" location="3650,950" dimension="82,49" />
+  <StrutsActivity path="/cw/DetailShow.jsp" location="2150,1750" dimension="121,49" />
+  <StrutsActivity path="/cw/cwMainframe.jsp" location="1550,1750" dimension="131,49" />
+  <StrutsActivity path="/form/cw.jsp" location="1250,1750" dimension="90,49" />
+  <StrutsActivity path="/audit/select2.jsp" location="2750,1750" dimension="113,49" />
+  <StrutsActivity path="/form/audit.jsp" location="3350,1550" dimension="101,49" />
+  <StrutsActivity path="/company/personal/release2.jsp" location="2450,1850" dimension="184,49" />
+  <StrutsActivity path="/company/personal/showList.jsp" location="350,1850" dimension="184,49" />
+  <StrutsActivity path="/company/DetailShow.jsp" location="50,1850" dimension="151,49" />
+  <StrutsActivity path="/company/personal/MenuManager.jsp" location="1250,1850" dimension="211,49" />
+  <StrutsActivity path="/company/Company.jsp" location="650,1850" dimension="143,49" />
+  <StrutsActivity path="/form/menu.jsp" location="2150,1850" dimension="103,49" />
+  <StrutsActivity path="/vave/kpi/topicList.jsp" location="1550,1950" dimension="135,49" />
+  <StrutsActivity path="/vave/kpi/myTopicList.jsp" location="3350,1950" dimension="151,49" />
+  <StrutsActivity path="/vave/kpi/showBusiness.jsp" location="3650,1050" dimension="162,49" />
+  <StrutsActivity path="/vave/kpi/updateBusiness.jsp" location="3050,1950" dimension="171,49" />
+  <StrutsActivity path="/vave/kpi/business.jsp" location="1850,1950" dimension="137,49" />
+  <StrutsActivity path="/form/businessTopic.jsp" location="3650,1650" dimension="143,49" />
+  <StrutsActivity path="/vave/shop/showAccount.jsp" location="3650,1950" dimension="170,49" />
+  <StrutsActivity path="/vave/shop/showAccountGoods.jsp" location="1250,2050" dimension="200,49" />
+  <StrutsActivity path="/form/account.jsp" location="2750,1950" dimension="115,49" />
+  <StrutsActivity path="/vave/shop/goodsList.jsp" location="3650,1150" dimension="151,49" />
+  <StrutsActivity path="/vave/shop/goodsDetails.jsp" location="3650,1250" dimension="167,49" />
+  <StrutsActivity path="/form/goods.jsp" location="950,2050" dimension="106,49" />
+  <StrutsActivity path="/HumanResource/assembly_room/updateAccessory.jsp" location="2150,2150" dimension="328,48" />
+  <StrutsActivity path="/HumanResource/assembly_room/details.jsp" location="3950,2050" dimension="280,48" />
+  <StrutsActivity path="/HumanResource/assembly_room/success.jsp" location="1550,2150" dimension="280,48" />
+  <StrutsActivity path="/HumanResource/assembly_room/dashbar.jsp" location="350,2150" dimension="280,48" />
+  <StrutsActivity path="/Lab/Experiment_Apply/innerForm.jsp" location="2150,2050" dimension="250,48" />
+  <StrutsActivity path="/Lab/Experiment_Apply/approve/approve.jsp" location="50,2250" dimension="286,48" />
+  <StrutsActivity path="/PCL/MainData/showDetails.jsp" location="4250,1150" dimension="214,48" />
+  <StrutsActivity path="/PCL/MainData/updateDetails.jsp" location="2750,2250" dimension="226,48" />
+  <StrutsActivity path="/PCL/MainData/Form.jsp" location="4250,1350" dimension="172,48" />
+  <StrutsActivity path="/PCL/MainData/FormDetails.jsp" location="1550,2250" dimension="214,48" />
+  <StrutsActivity path="/PCL/MainData/showDetailsTip.jsp" location="4250,1250" dimension="232,48" />
+  <StrutsActivity path="/PCL/MainData/explain.jsp" location="4250,1450" dimension="190,48" />
+  <StrutsActivity path="/PCL/MainData/showList.jsp" location="1850,2250" dimension="196,48" />
+  <StrutsActivity path="/form/sap.jsp" location="4250,1750" dimension="118,48" />
+  <StrutsActivity path="/DMS/Input/define.jsp" location="2150,2250" dimension="166,48" />
+  <StrutsActivity path="/DMS/BaseInfo/indicate.jsp" location="4250,1950" dimension="196,48" />
+  <StrutsActivity path="/PCLMainData/showList.jsp" location="1250,2250" dimension="190,48" />
+  <StrutsActivity path="/epor/UpdateSubject.jsp" location="3950,1150" dimension="148,49" />
+  <StrutsActivity path="/epor/UpdateProject.jsp" location="3950,1250" dimension="146,49" />
+  <StrutsActivity path="/front/hrpost/FigureAccount.jsp" location="3050,850" dimension="183,49" />
+  <StrutsActivity path="/front/hrpost/FigureAndPostIdAdd.jsp" location="3050,950" dimension="213,49" />
+  <StrutsActivity path="/audit/aduitManager.jsp" location="2450,1750" dimension="145,49" />
+  <StrutsActivity path="/front/hrpost/addExcel.jsp" location="3050,1050" dimension="196,48" />
+  <StrutsActivity path="/Login.jsp" location="350,150" dimension="100,48" />
+  <StrutsActivity path="/Mainframe.jsp" location="1250,150" dimension="101,49" />
+  <StrutsActivity path="front/hrpost/FigureAndPostIdAdd.jsp" location="1250,1650" dimension="209,49" />
+  <StrutsActivity path="/vave/task/MyTaskTeam.jsp" location="2450,1050" dimension="165,49" />
+  <StrutsActivity path="/front/bounce/PostManager.jsp" location="350,1650" dimension="181,49" />
+  <StrutsActivity path="/front/PostManager.jsp" location="350,450" dimension="172,48" />
+  <StrutsActivity path="/index/departmentIndexShow.jsp" location="650,1150" dimension="191,49" />
+  <StrutsActivity path="/index/DepartmentIndexAddByDepartmentManager.jsp" location="2150,350" dimension="296,49" />
+  <StrutsActivity path="vave/Proposal_approval_Select.jsp" location="950,1050" dimension="199,49" />
+  <StrutsActivity path="/LoginSuccess.html" location="50,550" dimension="148,48" />
+  <StrutsActivity path="/admin/EmpManager.jsp" location="650,950" dimension="145,49" />
+  <StrutsActivity path="/front/EmpManager.jsp" location="950,250" dimension="166,48" />
+  <StrutsActivity path="/manager/PostSalaryConstruct.jsp" location="1250,250" dimension="195,49" />
+  <StrutsActivity path="test.jsp" location="1250,350" dimension="66,49" />
+  <StrutsActivity path="salary/PostSalary.jsp" location="50,650" dimension="166,48" />
+  <StrutsActivity path="/MyJsp.jsp" location="950,150" dimension="100,48" />
+  <StrutsActivity path="index.jsp" location="650,50" dimension="94,48" />
+  <StrutsActivity path="/front/index.jsp" location="650,350" dimension="136,48" />
+  <StrutsActivity path="/Myjsp.jsp" location="650,150" dimension="100,48" />
+  <StrutsActivity path="Login.jsp" location="950,50" dimension="94,48" />
+  <StrutsActivity path="/manager/PostManager.jsp" location="1250,650" dimension="160,49" />
+  <StrutsActivity path="/front/" location="1550,850" dimension="61,49" />
+  <StrutsActivity path="/index/CompanyShow.jsp" location="1850,950" dimension="152,49" />
+  <StrutsActivity path="/index/" location="650,1250" dimension="63,49" />
+  <StrutsActivity path="/vave/VAVE_proposalForm_demoselfShow.jsp" location="2150,850" dimension="250,49" />
+  <StrutsActivity path="/vave/the Department/VAVE_proposalForm_state1.jsp" location="650,1350" dimension="292,49" />
+  <StrutsActivity path="/index/show" location="950,1550" dimension="88,49" />
+  <StrutsActivity path="front/hrpost/PostManager.jsp" location="650,1650" dimension="173,49" />
+  <StrutsActivity path="/p" location="1550,1650" dimension="39,49" />
+  <StrutsActivity path="plm/plm.jsp" location="3050,1350" dimension="83,49" />
+  <StrutsActivity path="/front/hrpost/gw/PostUpdate.jsp" location="2450,1650" dimension="188,49" />
+  <StrutsActivity path="/front/hrpost/gw/BouncePost.jsp" location="2750,1650" dimension="188,49" />
+  <StrutsActivity path="/front/hrpost/gw/BouncePostupdate.jsp" location="3050,1650" dimension="222,49" />
+  <StrutsActivity path="audit/aduitManager.jsp" location="3350,1650" dimension="141,49" />
+  <StrutsActivity path="/front/bounce/teamWork.jsp" location="3050,1750" dimension="167,49" />
+  <StrutsActivity path="index/KpiState.jsp" location="2750,1850" dimension="117,49" />
+  <StrutsActivity path="/index/departEmpIndex/EmpIndexScore.jsp" location="3650,1350" dimension="240,49" />
+  <StrutsActivity path="/vave/kpi/release2.jsp" location="3650,1750" dimension="137,49" />
+  <StrutsActivity path="/vave/k/release2.jsp" location="3650,1850" dimension="129,49" />
+  <StrutsActivity path="/vave/personal/release2.jsp" location="950,1950" dimension="165,49" />
+  <StrutsActivity path="/v/personal/release2.jsp" location="1250,1950" dimension="147,49" />
+  <StrutsActivity path="cw/log.jsp" location="1550,2050" dimension="78,49" />
+  <StrutsActivity path="vave/Statistics/projectList.jsp" location="3950,1650" dimension="172,49" />
+  <StrutsActivity path="/HumanResource/assembly_room/Success.html" location="950,2150" dimension="286,48" />
+  <StrutsActivity path="/PCL/MainData/indicate.jsp" location="4250,1850" dimension="196,48" />
+  <StrutsActivity path="/epor/baseInfo/processImg.html" location="3050,2250" dimension="223,53" />
+  <StrutsActivity path="/epor/processImg.html" location="3350,2250" dimension="167,53" />
+  <StrutsActivity path="/epor/rejectPrForm.jsp" />
+  <StrutsTransition id="/proposal.do,MyTaskTeam,/vave/newTask/createProject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1072" />
+      <AbsolutePoint location="-23,1072" />
+      <AbsolutePoint location="-23,736" />
+      <AbsolutePoint location="2845,736" />
+      <AbsolutePoint location="2845,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,selectMyTask,/task.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,1394" />
+      <AbsolutePoint location="451,1394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/account.jsp,null,/account.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2750,1974" />
+      <AbsolutePoint location="2669,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,explain,/PCL/MainData/explain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,addEmpIndex,/index/EmpIndexAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,805" />
+      <AbsolutePoint location="289,805" />
+      <AbsolutePoint location="289,1574" />
+      <AbsolutePoint location="350,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,AddDepartIndex,/departIndex.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="771,750" />
+      <AbsolutePoint location="771,465" />
+      <AbsolutePoint location="1164,465" />
+      <AbsolutePoint location="1164,784" />
+      <AbsolutePoint location="930,784" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,success,/epor/success.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/figureAndPostId.jsp,null,/figureAndPostId.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1674" />
+      <AbsolutePoint location="-85,1674" />
+      <AbsolutePoint location="-85,35" />
+      <AbsolutePoint location="2850,35" />
+      <AbsolutePoint location="2850,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,everyDepartmentEmpIndexShow,/index/everyDepartmentEmpIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="486,834" />
+      <AbsolutePoint location="486,945" />
+      <AbsolutePoint location="2270,945" />
+      <AbsolutePoint location="2270,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,doSelectEmpByDepartId,/employee.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,1231" />
+      <AbsolutePoint location="-34,1231" />
+      <AbsolutePoint location="-34,292" />
+      <AbsolutePoint location="50,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,EmpIndexShow,/index/show/EmpIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="801,750" />
+      <AbsolutePoint location="801,-85" />
+      <AbsolutePoint location="2726,-85" />
+      <AbsolutePoint location="2726,474" />
+      <AbsolutePoint location="2750,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cw.do,DetailShow,/cw/DetailShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1145,1814" />
+      <AbsolutePoint location="2210,1814" />
+      <AbsolutePoint location="2210,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,VAVE_proposalForm_state3,/vave/Company/VAVE_proposalForm_state3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="98,1138" />
+      <AbsolutePoint location="98,1208" />
+      <AbsolutePoint location="-67,1208" />
+      <AbsolutePoint location="-67,2218" />
+      <AbsolutePoint location="2744,2218" />
+      <AbsolutePoint location="2744,874" />
+      <AbsolutePoint location="2711,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,empIndexShowR,/index/empIndexShowR.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1754,1238" />
+      <AbsolutePoint location="1754,1274" />
+      <AbsolutePoint location="1850,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,MyControlTaskList,/vave/task/MyControlTaskList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,1350" />
+      <AbsolutePoint location="451,1346" />
+      <AbsolutePoint location="2726,1346" />
+      <AbsolutePoint location="2726,774" />
+      <AbsolutePoint location="2640,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,scoreSelfDempEmpIndexs,/index/departEmpIndex/scoreSelfDempEmpIndexs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,792" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/labAction.do,details,/Lab/Experiment_Apply/innerForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3950,2183" />
+      <AbsolutePoint location="2583,2183" />
+      <AbsolutePoint location="2583,2074" />
+      <AbsolutePoint location="2400,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,74" />
+      <AbsolutePoint location="294,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainSuggestion.do,doSearchSelfDepartment,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,214" />
+      <AbsolutePoint location="-1,214" />
+      <AbsolutePoint location="-1,1014" />
+      <AbsolutePoint location="126,1014" />
+      <AbsolutePoint location="126,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,detailShow,/company/DetailShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3384,1812" />
+      <AbsolutePoint location="3384,1906" />
+      <AbsolutePoint location="125,1906" />
+      <AbsolutePoint location="125,1899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,addExcel0,/front/hrpost/addExcel0.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2880,150" />
+      <AbsolutePoint location="2880,-85" />
+      <AbsolutePoint location="3600,-85" />
+      <AbsolutePoint location="3600,1174" />
+      <AbsolutePoint location="3513,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,insertByForm,/front/PersonalEffectRegister.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,550" />
+      <AbsolutePoint location="529,141" />
+      <AbsolutePoint location="1497,141" />
+      <AbsolutePoint location="1497,874" />
+      <AbsolutePoint location="1439,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,processImg,/epor/processImg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,print,/epor/Print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,success,/right.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,894" />
+      <AbsolutePoint location="151,474" />
+      <AbsolutePoint location="1286,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/otherSuggestion.jsp,null,/otherSuggestion.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="428,1150" />
+      <AbsolutePoint location="428,1146" />
+      <AbsolutePoint location="1980,1146" />
+      <AbsolutePoint location="1980,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,KpiState,/index/KpiState.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1774,1150" />
+      <AbsolutePoint location="1774,1015" />
+      <AbsolutePoint location="3287,1015" />
+      <AbsolutePoint location="3287,1874" />
+      <AbsolutePoint location="3171,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/audit.jsp,null,/audit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3400,1550" />
+      <AbsolutePoint location="3400,1438" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/companySuggestion.jsp,null,/companySuggestion.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="136,1399" />
+      <AbsolutePoint location="136,1446" />
+      <AbsolutePoint location="2291,1446" />
+      <AbsolutePoint location="2291,1338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,ProposalDetails_selfShow,/vave/VAVE_proposalForm_demo_selfShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1072" />
+      <AbsolutePoint location="29,1072" />
+      <AbsolutePoint location="29,-25" />
+      <AbsolutePoint location="2685,-25" />
+      <AbsolutePoint location="2685,574" />
+      <AbsolutePoint location="2406,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,excel,/front/PersonalEffectRegisterByExcel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="486,634" />
+      <AbsolutePoint location="486,645" />
+      <AbsolutePoint location="1417,645" />
+      <AbsolutePoint location="1417,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/roomSystem.do,details,/HumanResource/assembly_room/details.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3624,2083" />
+      <AbsolutePoint location="3950,2083" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,mailCheck,/login.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="155,50" />
+      <AbsolutePoint location="155,-70" />
+      <AbsolutePoint location="304,-70" />
+      <AbsolutePoint location="304,109" />
+      <AbsolutePoint location="294,109" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights.do,showRights,/rights.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2885,1250" />
+      <AbsolutePoint location="2885,1165" />
+      <AbsolutePoint location="3025,1165" />
+      <AbsolutePoint location="3025,1284" />
+      <AbsolutePoint location="2960,1284" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dindex.do,selfDempEmpIndexsShow,/index/departEmpIndex/addSelfDempEmpIndexs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="482,1994" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,details,/PCL/MainData/FormDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="990,2313" />
+      <AbsolutePoint location="1657,2313" />
+      <AbsolutePoint location="1657,2298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,DepartmentIndexAdd,/index/DepartmentIndexAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="743,750" />
+      <AbsolutePoint location="743,614" />
+      <AbsolutePoint location="1368,614" />
+      <AbsolutePoint location="1368,474" />
+      <AbsolutePoint location="1550,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,admin,/epor/adminupdatePrForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,company,/company/Company.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3384,1781" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/statistics.do,rate,/vave/Statistics/rate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1961,1394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/roomSystem.do,accessoryDetails,/HumanResource/assembly_room/updateAccessory.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3487,2092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,reject,/epor/rejectPrForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,MyCompanyIndexR,/index/MyCompanyIndex_justlook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="831,750" />
+      <AbsolutePoint location="831,5" />
+      <AbsolutePoint location="2126,5" />
+      <AbsolutePoint location="2126,474" />
+      <AbsolutePoint location="2150,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,postType,/Manager/PostSalaryConstruct.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1143,434" />
+      <AbsolutePoint location="1143,1042" />
+      <AbsolutePoint location="447,1042" />
+      <AbsolutePoint location="447,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,MyCompanyIndexAction,/departIndex.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="905,750" />
+      <AbsolutePoint location="905,671" />
+      <AbsolutePoint location="937,671" />
+      <AbsolutePoint location="937,762" />
+      <AbsolutePoint location="930,762" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,Proposal_approval2,/vave/Proposal_approval_Select2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1116" />
+      <AbsolutePoint location="-55,1116" />
+      <AbsolutePoint location="-55,514" />
+      <AbsolutePoint location="1954,514" />
+      <AbsolutePoint location="1954,499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,selectMyTeamTaskDetails,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1392" />
+      <AbsolutePoint location="260,1392" />
+      <AbsolutePoint location="260,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,MyTasksList,/vave/task/MyTasksList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,1438" />
+      <AbsolutePoint location="451,1514" />
+      <AbsolutePoint location="1202,1514" />
+      <AbsolutePoint location="1202,1565" />
+      <AbsolutePoint location="1506,1565" />
+      <AbsolutePoint location="1506,1874" />
+      <AbsolutePoint location="1550,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/plm.do,showDetails,/plm/showDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3242,1238" />
+      <AbsolutePoint location="3242,1614" />
+      <AbsolutePoint location="2214,1614" />
+      <AbsolutePoint location="2214,1650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vaveInfo.do,showAll,/vave/baseInfo/AnnSale.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2653,1538" />
+      <AbsolutePoint location="2653,1668" />
+      <AbsolutePoint location="2718,1668" />
+      <AbsolutePoint location="2718,2416" />
+      <AbsolutePoint location="35,2416" />
+      <AbsolutePoint location="35,1974" />
+      <AbsolutePoint location="50,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,empIndexScore,/index/EmpIndexScore.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,792" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,test,/test.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="780,834" />
+      <AbsolutePoint location="780,865" />
+      <AbsolutePoint location="1224,865" />
+      <AbsolutePoint location="1224,574" />
+      <AbsolutePoint location="1250,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,Form,/PCL/MainData/Form.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,AddMembers,/vave/newTask/AddMembers.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="538,1438" />
+      <AbsolutePoint location="538,1736" />
+      <AbsolutePoint location="1943,1736" />
+      <AbsolutePoint location="1943,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/audit.do,auditManager,/audit/select2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3350,1414" />
+      <AbsolutePoint location="3034,1414" />
+      <AbsolutePoint location="3034,1774" />
+      <AbsolutePoint location="2863,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,selectMyProposalForm,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="143,1050" />
+      <AbsolutePoint location="143,971" />
+      <AbsolutePoint location="303,971" />
+      <AbsolutePoint location="303,1054" />
+      <AbsolutePoint location="271,1054" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,personalEffectselect,/front/PersonalEffectSelect.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="612,632" />
+      <AbsolutePoint location="1137,632" />
+      <AbsolutePoint location="1137,974" />
+      <AbsolutePoint location="1250,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,updateBusiness,/vave/kpi/updateBusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3826,1538" />
+      <AbsolutePoint location="3826,2014" />
+      <AbsolutePoint location="3135,2014" />
+      <AbsolutePoint location="3135,1999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goods.do,goodsDetails,/vave/shop/goodsDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,2094" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/businessTopic.jsp,null,/businessTopic.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3721,1650" />
+      <AbsolutePoint location="3721,1538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,postManger,/front/hrpost/PostManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1188,392" />
+      <AbsolutePoint location="1242,392" />
+      <AbsolutePoint location="1242,1674" />
+      <AbsolutePoint location="1127,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,BounceFigureUpdate,/front/hrpost/th/FigureAccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2986,238" />
+      <AbsolutePoint location="2986,1714" />
+      <AbsolutePoint location="748,1714" />
+      <AbsolutePoint location="748,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/vaveInfo.jsp,null,/vaveInfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1574" />
+      <AbsolutePoint location="-23,1574" />
+      <AbsolutePoint location="-23,1936" />
+      <AbsolutePoint location="2351,1936" />
+      <AbsolutePoint location="2351,1492" />
+      <AbsolutePoint location="2450,1492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,FigureManager,/front/hrpost/th/FigureManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2820,150" />
+      <AbsolutePoint location="2820,65" />
+      <AbsolutePoint location="1828,65" />
+      <AbsolutePoint location="1828,1774" />
+      <AbsolutePoint location="1850,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,success,/epor/success.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="3410,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/roomSystem.do,doTest,/HumanResource/assembly_room/dashbar.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3487,2092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,showKpiState,/empIndex.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,792" />
+      <AbsolutePoint location="1664,1194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,business,/vave/kpi/business.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3650,1514" />
+      <AbsolutePoint location="2920,1514" />
+      <AbsolutePoint location="2920,1414" />
+      <AbsolutePoint location="2088,1414" />
+      <AbsolutePoint location="2088,1974" />
+      <AbsolutePoint location="1987,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,FigureAccount,/front/hrpost/th/FigureAccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2880,194" />
+      <AbsolutePoint location="2880,1774" />
+      <AbsolutePoint location="748,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/employeeProduct.jsp,null,/employeeProduct.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1630,750" />
+      <AbsolutePoint location="1630,638" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,FigureInbounds,/front/hrpost/th/FigureInbounds.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3010,194" />
+      <AbsolutePoint location="3528,194" />
+      <AbsolutePoint location="3528,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,postAdd,/front/hrpost/PostAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1069,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/otherSuggestion.do,doSearchOutside,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1094" />
+      <AbsolutePoint location="1846,1094" />
+      <AbsolutePoint location="1846,1541" />
+      <AbsolutePoint location="35,1541" />
+      <AbsolutePoint location="35,1165" />
+      <AbsolutePoint location="80,1165" />
+      <AbsolutePoint location="80,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,EmpManager,/Manager/EmpManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="247,334" />
+      <AbsolutePoint location="247,846" />
+      <AbsolutePoint location="1029,846" />
+      <AbsolutePoint location="1029,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/statistics.jsp,null,/statistics.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="109,1499" />
+      <AbsolutePoint location="109,1532" />
+      <AbsolutePoint location="1059,1532" />
+      <AbsolutePoint location="1059,1592" />
+      <AbsolutePoint location="1455,1592" />
+      <AbsolutePoint location="1455,1532" />
+      <AbsolutePoint location="1876,1532" />
+      <AbsolutePoint location="1876,1438" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,Select_Form,/vave/Select_Form.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="271,1084" />
+      <AbsolutePoint location="350,1084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,showPrFormTip,/epor/showPrFormTip.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/roomSystem.do,success,/HumanResource/assembly_room/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3487,2092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/companySuggestion.do,SearchAllCompany,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2150,1336" />
+      <AbsolutePoint location="190,1336" />
+      <AbsolutePoint location="190,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,ChangManager,/vave/newTask/changManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="548,1350" />
+      <AbsolutePoint location="548,932" />
+      <AbsolutePoint location="3236,932" />
+      <AbsolutePoint location="3236,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,welcome,/welcome/Login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="3110,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,MenuManager,/company/personal/MenuManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3362,1812" />
+      <AbsolutePoint location="3362,1841" />
+      <AbsolutePoint location="3040,1841" />
+      <AbsolutePoint location="3040,2014" />
+      <AbsolutePoint location="2684,2014" />
+      <AbsolutePoint location="2684,2114" />
+      <AbsolutePoint location="1476,2114" />
+      <AbsolutePoint location="1476,1874" />
+      <AbsolutePoint location="1461,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cw.do,logs,/cw/log.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,ManagerIndexAdd,/index/show/ManagerIndexAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,761" />
+      <AbsolutePoint location="327,761" />
+      <AbsolutePoint location="327,113" />
+      <AbsolutePoint location="2601,113" />
+      <AbsolutePoint location="2601,374" />
+      <AbsolutePoint location="2750,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,prMailCheck,/epor/Login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="172,1874" />
+      <AbsolutePoint location="4015,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,reject,/epor/updatePrForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="1351,774" />
+      <AbsolutePoint location="4022,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/account.do,showAccount,/vave/shop/showAccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2669,2032" />
+      <AbsolutePoint location="3735,2032" />
+      <AbsolutePoint location="3735,1999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,teamWork,/admin/teamWork.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="297,250" />
+      <AbsolutePoint location="297,131" />
+      <AbsolutePoint location="3416,131" />
+      <AbsolutePoint location="3416,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,empIndexShow,/index/empIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1664,1238" />
+      <AbsolutePoint location="1664,1547" />
+      <AbsolutePoint location="307,1547" />
+      <AbsolutePoint location="307,1292" />
+      <AbsolutePoint location="350,1292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goods.jsp,null,/goods.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,2080" />
+      <AbsolutePoint location="288,2080" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cw.do,cwMainframe,/cw/cwMainframe.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1142,1750" />
+      <AbsolutePoint location="1142,1614" />
+      <AbsolutePoint location="1615,1614" />
+      <AbsolutePoint location="1615,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,personalShowList,/company/personal/showList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3384,1781" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,DepartmentIndexAdd,/index/DepartmentIndexAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,783" />
+      <AbsolutePoint location="237,783" />
+      <AbsolutePoint location="237,536" />
+      <AbsolutePoint location="1642,536" />
+      <AbsolutePoint location="1642,499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,VAVE_proposalForm_state1,/vave/The Department/VAVE_proposalForm_state1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="238,1138" />
+      <AbsolutePoint location="238,1474" />
+      <AbsolutePoint location="650,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,ShowEmpUid,/vave/util/ShowEmpUid.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="181,292" />
+      <AbsolutePoint location="181,374" />
+      <AbsolutePoint location="3129,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,ProposalDetails_taskShow,/vave/task/ProposalDetails_taskShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="271,1114" />
+      <AbsolutePoint location="327,1114" />
+      <AbsolutePoint location="327,914" />
+      <AbsolutePoint location="2564,914" />
+      <AbsolutePoint location="2564,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,SelectMyTeamTask,/proposal.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,1094" />
+      <AbsolutePoint location="160,1035" />
+      <AbsolutePoint location="35,1035" />
+      <AbsolutePoint location="35,1054" />
+      <AbsolutePoint location="160,1054" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,vave,/Mainframe_vave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,92" />
+      <AbsolutePoint location="47,92" />
+      <AbsolutePoint location="47,840" />
+      <AbsolutePoint location="1485,840" />
+      <AbsolutePoint location="1485,174" />
+      <AbsolutePoint location="1550,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/mainSuggestion.jsp,null,/mainSuggestion.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2002,774" />
+      <AbsolutePoint location="2094,774" />
+      <AbsolutePoint location="2094,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,DepartmentIndexShow,/index/show/DepartmentIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="930,814" />
+      <AbsolutePoint location="2860,814" />
+      <AbsolutePoint location="2860,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,changeLang,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,50" />
+      <AbsolutePoint location="172,4" />
+      <AbsolutePoint location="574,4" />
+      <AbsolutePoint location="574,474" />
+      <AbsolutePoint location="650,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,PostBounce,/front/bounce/PostBounceRegister.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,592" />
+      <AbsolutePoint location="345,592" />
+      <AbsolutePoint location="345,1638" />
+      <AbsolutePoint location="2857,1638" />
+      <AbsolutePoint location="2857,1599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/frontIndex/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="172,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,Proposal_approval,/vave/Proposal_approval_Select.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="182,1050" />
+      <AbsolutePoint location="182,1035" />
+      <AbsolutePoint location="1351,1035" />
+      <AbsolutePoint location="1351,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/post.jsp,null,/post.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="112,450" />
+      <AbsolutePoint location="112,413" />
+      <AbsolutePoint location="950,413" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sap.do,rs,/PCL/MainData/showDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4366,1550" />
+      <AbsolutePoint location="4366,1198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,indexShow,/index/UpdateIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="548,834" />
+      <AbsolutePoint location="548,887" />
+      <AbsolutePoint location="1195,887" />
+      <AbsolutePoint location="1195,420" />
+      <AbsolutePoint location="2956,420" />
+      <AbsolutePoint location="2956,574" />
+      <AbsolutePoint location="2894,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,IPSalary,/salary/pp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,582" />
+      <AbsolutePoint location="223,582" />
+      <AbsolutePoint location="223,775" />
+      <AbsolutePoint location="174,775" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,addEmpIndex,/index/DepartmentIndexShow_selectEmp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="181,250" />
+      <AbsolutePoint location="181,232" />
+      <AbsolutePoint location="1673,232" />
+      <AbsolutePoint location="1673,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,doSearchAllCompanyList,/vave/Proposal_approval_Select3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,1050" />
+      <AbsolutePoint location="160,1014" />
+      <AbsolutePoint location="1654,1014" />
+      <AbsolutePoint location="1654,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dMS.do,define,/DMS/Input/define.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4084,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,AccountTypeTime,/salary/AccountTypeTime.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="612,614" />
+      <AbsolutePoint location="645,614" />
+      <AbsolutePoint location="645,1574" />
+      <AbsolutePoint location="650,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,DMSEmpAdd,/DMS/emp/EmpAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,274" />
+      <AbsolutePoint location="-79,274" />
+      <AbsolutePoint location="-79,1165" />
+      <AbsolutePoint location="17,1165" />
+      <AbsolutePoint location="17,2242" />
+      <AbsolutePoint location="2527,2242" />
+      <AbsolutePoint location="2527,2250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,showKpiState,/empIndex.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1642,1150" />
+      <AbsolutePoint location="1642,1106" />
+      <AbsolutePoint location="1796,1106" />
+      <AbsolutePoint location="1796,1192" />
+      <AbsolutePoint location="1778,1192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/menu.jsp,null,/menu.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,SELF,/epor/updatePrForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,finishedProject,/vave/newTask/finishedProject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1072" />
+      <AbsolutePoint location="-1,1072" />
+      <AbsolutePoint location="-1,2356" />
+      <AbsolutePoint location="2132,2356" />
+      <AbsolutePoint location="2132,1974" />
+      <AbsolutePoint location="2150,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,ProposalDetails,/vave/VAVE_proposalForm_demo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="271,1132" />
+      <AbsolutePoint location="753,1132" />
+      <AbsolutePoint location="753,1099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/statistics.do,depart,/vave/Statistics/department.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2073,1384" />
+      <AbsolutePoint location="2541,1384" />
+      <AbsolutePoint location="2541,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,showPrForm,/epor/showPrForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1452,1514" />
+      <AbsolutePoint location="2218,1514" />
+      <AbsolutePoint location="2218,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,everyDepartmentEmpIndexShow_justlook,/index/everyDepartmentEmpIndexShow_justlook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,834" />
+      <AbsolutePoint location="567,1614" />
+      <AbsolutePoint location="1091,1614" />
+      <AbsolutePoint location="1091,1299" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/rights.jsp,null,/rights.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2802,1450" />
+      <AbsolutePoint location="2802,1338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights.do,EmpRightManager,/rights/EmpRightManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2855,1250" />
+      <AbsolutePoint location="2855,1214" />
+      <AbsolutePoint location="1793,1214" />
+      <AbsolutePoint location="1793,1574" />
+      <AbsolutePoint location="1719,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,EachDepartInsert,/index/EachDepartInsert.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="902,834" />
+      <AbsolutePoint location="902,1114" />
+      <AbsolutePoint location="1491,1114" />
+      <AbsolutePoint location="1491,974" />
+      <AbsolutePoint location="1550,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chejianjiangjin.do,overtimeManager,/front/overtime.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2902,2134" />
+      <AbsolutePoint location="2902,2446" />
+      <AbsolutePoint location="2088,2446" />
+      <AbsolutePoint location="2088,2074" />
+      <AbsolutePoint location="2004,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,addExcel1,/front/hrpost/addExcel1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2910,238" />
+      <AbsolutePoint location="2910,314" />
+      <AbsolutePoint location="3431,314" />
+      <AbsolutePoint location="3431,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,updateDetails,/PCL/MainData/updateDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,success,/right.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="574,550" />
+      <AbsolutePoint location="574,546" />
+      <AbsolutePoint location="1286,546" />
+      <AbsolutePoint location="1286,499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,showDetails,/PCL/MainData/showDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,selectDepart,/index/DepartmentIndexShow_selectDepart.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="872,834" />
+      <AbsolutePoint location="872,1174" />
+      <AbsolutePoint location="950,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employeeProduct.do,DailyRecordQuery,/front/PersonalEffectSelect.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,594" />
+      <AbsolutePoint location="1545,594" />
+      <AbsolutePoint location="1545,956" />
+      <AbsolutePoint location="1428,956" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,index,/welcome/Login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="172,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/sap.jsp,null,/sap.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4309,1750" />
+      <AbsolutePoint location="4309,1634" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/account.do,showAccountGoods,/vave/shop/showAccountGoods.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2559,1994" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,bockPostType,/post.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1137,350" />
+      <AbsolutePoint location="1137,271" />
+      <AbsolutePoint location="1195,271" />
+      <AbsolutePoint location="1195,382" />
+      <AbsolutePoint location="1188,382" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,CompanyIndexAdd,/index/CompanyIndexAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,775" />
+      <AbsolutePoint location="303,775" />
+      <AbsolutePoint location="303,441" />
+      <AbsolutePoint location="2080,441" />
+      <AbsolutePoint location="2080,874" />
+      <AbsolutePoint location="2023,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,AllTopic,/vave/Statistics/AllTopic.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,1094" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,EmpAdd,/Manager/EmpAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="187,250" />
+      <AbsolutePoint location="187,242" />
+      <AbsolutePoint location="2518,242" />
+      <AbsolutePoint location="2518,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goods.do,goodsList,/vave/shop/goodsList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,2094" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,myTopicListAction,/businessTopic.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3787,1450" />
+      <AbsolutePoint location="3787,1414" />
+      <AbsolutePoint location="3999,1414" />
+      <AbsolutePoint location="3999,1494" />
+      <AbsolutePoint location="3924,1494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,showPR,/epor.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="1351,1494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,VAVE_proposalForm_state2,/vave/Outside the department/VAVE_proposalForm_state2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,1138" />
+      <AbsolutePoint location="160,1245" />
+      <AbsolutePoint location="1415,1245" />
+      <AbsolutePoint location="1415,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/personal.jsp,null,/personal.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,568" />
+      <AbsolutePoint location="612,568" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,empIndexAdd,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1664,1150" />
+      <AbsolutePoint location="1664,1132" />
+      <AbsolutePoint location="947,1132" />
+      <AbsolutePoint location="947,274" />
+      <AbsolutePoint location="690,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/epor.jsp,null,/epor.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,1474" />
+      <AbsolutePoint location="1452,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/statistics.do,approveRate,/vave/Statistics/appraveRate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1961,1394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,ProposalDetails_OutShow,/vave/VAVE_proposalForm_demo_OutShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,1138" />
+      <AbsolutePoint location="160,1214" />
+      <AbsolutePoint location="1521,1214" />
+      <AbsolutePoint location="1521,674" />
+      <AbsolutePoint location="2150,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,release2,/company/personal/release2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3384,1812" />
+      <AbsolutePoint location="3384,1942" />
+      <AbsolutePoint location="2542,1942" />
+      <AbsolutePoint location="2542,1899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,updateSubject,/epor/baseInfo/UpdateSubject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,EmpIndexShow,/index/show/EmpIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,750" />
+      <AbsolutePoint location="472,657" />
+      <AbsolutePoint location="937,657" />
+      <AbsolutePoint location="937,487" />
+      <AbsolutePoint location="1216,487" />
+      <AbsolutePoint location="1216,406" />
+      <AbsolutePoint location="2842,406" />
+      <AbsolutePoint location="2842,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,MyCompanyIndex,/index/MyCompanyIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="883,750" />
+      <AbsolutePoint location="883,341" />
+      <AbsolutePoint location="1634,341" />
+      <AbsolutePoint location="1634,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dMS.do,indicate,/DMS/BaseInfo/indicate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4197,334" />
+      <AbsolutePoint location="4197,1974" />
+      <AbsolutePoint location="4250,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,BouncePostManager,/front/hrpost/gx/Padd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3010,224" />
+      <AbsolutePoint location="3010,1799" />
+      <AbsolutePoint location="427,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,CompanyShow_Action,/index.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="486,750" />
+      <AbsolutePoint location="486,685" />
+      <AbsolutePoint location="601,685" />
+      <AbsolutePoint location="601,814" />
+      <AbsolutePoint location="594,814" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,updateProject,/epor/baseInfo/UpdateProject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,addExcel2,/front/hrpost/addExcel2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2956,238" />
+      <AbsolutePoint location="2956,265" />
+      <AbsolutePoint location="3287,265" />
+      <AbsolutePoint location="3287,974" />
+      <AbsolutePoint location="3350,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/plm.do,MpartTreeShow,/plm/MpartTreeShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3158,1238" />
+      <AbsolutePoint location="3158,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,VAVE_proposalForm_state0,/vave/VAVE_proposalForm_state0.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="212,1138" />
+      <AbsolutePoint location="212,1314" />
+      <AbsolutePoint location="2126,1314" />
+      <AbsolutePoint location="2126,774" />
+      <AbsolutePoint location="2150,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,CompanyShow,/index/CompanyIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="594,762" />
+      <AbsolutePoint location="627,762" />
+      <AbsolutePoint location="627,-55" />
+      <AbsolutePoint location="2285,-55" />
+      <AbsolutePoint location="2285,265" />
+      <AbsolutePoint location="1970,265" />
+      <AbsolutePoint location="1970,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/empIndex.jsp,null,/empIndex.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1274" />
+      <AbsolutePoint location="-49,1274" />
+      <AbsolutePoint location="-49,2050" />
+      <AbsolutePoint location="1768,2050" />
+      <AbsolutePoint location="1768,1238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,showBusiness,/vave/kpi/showBusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3787,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/task.do,projectList,/vave/Statistics/projectList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,1394" />
+      <AbsolutePoint location="451,1774" />
+      <AbsolutePoint location="4038,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,showDetailsTip,/PCL/MainData/showDetailsTip.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/cw.jsp,null,/cw.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1774" />
+      <AbsolutePoint location="1145,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,company,/company/personal/ControlPanel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,DMSEmpManager,/DMS/emp/EmpManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="181,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personal.do,PostSalary,/salary/PostSalary.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="612,592" />
+      <AbsolutePoint location="699,592" />
+      <AbsolutePoint location="699,685" />
+      <AbsolutePoint location="950,685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/oS.jsp,null,/oS.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1894,1550" />
+      <AbsolutePoint location="1894,1536" />
+      <AbsolutePoint location="2435,1536" />
+      <AbsolutePoint location="2435,1106" />
+      <AbsolutePoint location="2750,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,myTopicList,/vave/kpi/myTopicList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3787,1494" />
+      <AbsolutePoint location="3425,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,showPrFormMoblieTip,/mobile/showPrFormTip.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,PostUpdate,/front/hrpost/PostUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1123,350" />
+      <AbsolutePoint location="1123,87" />
+      <AbsolutePoint location="2661,87" />
+      <AbsolutePoint location="2661,674" />
+      <AbsolutePoint location="2750,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empIndex.do,MyCompanyIndex,/departIndex.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1634,1238" />
+      <AbsolutePoint location="1634,1414" />
+      <AbsolutePoint location="627,1414" />
+      <AbsolutePoint location="627,792" />
+      <AbsolutePoint location="650,792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/labAction.do,approve,/Lab/Experiment_Apply/approve/approve.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4096,2192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,BouncePostUpdate,/front/hrpost/gx/BouncePostupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3004,238" />
+      <AbsolutePoint location="3004,1841" />
+      <AbsolutePoint location="160,1841" />
+      <AbsolutePoint location="160,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/departIndex.do,CompanyShow,/index/CompanyIndexShow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="861,750" />
+      <AbsolutePoint location="861,314" />
+      <AbsolutePoint location="1940,314" />
+      <AbsolutePoint location="1940,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,addSelfDempEmpIndexs,/index/departEmpIndex/addSelfDempEmpIndexs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,792" />
+      <AbsolutePoint location="3190,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/epor.do,showBuyer,/epor/approve/buyerConfirm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/proposal.do,VAVE_proposalForm,/vave/VAVE_proposalForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="267,1050" />
+      <AbsolutePoint location="267,714" />
+      <AbsolutePoint location="2537,714" />
+      <AbsolutePoint location="2537,499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businessTopic.do,topicList,/vave/kpi/topicList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3856,1538" />
+      <AbsolutePoint location="3856,2149" />
+      <AbsolutePoint location="1643,2149" />
+      <AbsolutePoint location="1643,1999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/plm.do,plm,/plm/plm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3212,1238" />
+      <AbsolutePoint location="3212,1474" />
+      <AbsolutePoint location="3137,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mainData.do,showList,/PCL/MainData/showList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,2334" />
+      <AbsolutePoint location="820,2386" />
+      <AbsolutePoint location="1948,2386" />
+      <AbsolutePoint location="1948,2298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/oS.do,OsManager,/admin/OsManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2750,1092" />
+      <AbsolutePoint location="2718,1092" />
+      <AbsolutePoint location="2718,1574" />
+      <AbsolutePoint location="2288,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/task.jsp,null,/task.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1874" />
+      <AbsolutePoint location="1754,1874" />
+      <AbsolutePoint location="1754,1436" />
+      <AbsolutePoint location="552,1436" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/figureAndPostId.do,addExcel3,/front/hrpost/addExcel3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2910,150" />
+      <AbsolutePoint location="2910,-25" />
+      <AbsolutePoint location="3570,-25" />
+      <AbsolutePoint location="3570,1074" />
+      <AbsolutePoint location="3513,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

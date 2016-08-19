@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	
+	<bean id="indicateDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.Indicate</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="verDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.Ver</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="snapDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.Score</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="templeteDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.Templete</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="scoreDetailsDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.ScoreDetails</value>
+		</constructor-arg>
+	</bean>
+		<bean id="bonusDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.dms.entity.Bonus</value>
+		</constructor-arg>
+	</bean>
+	<!-- service -->
+	<bean id="dmsEmpBiz" class="sdaac.wym.dms.biz.EmpBiz">
+		<property name="empdao" ref="empdao"></property>
+	</bean>
+	<bean id="bonusBiz" class="sdaac.wym.dms.biz.BonusBiz">
+		<property name="bonusDao" ref="bonusDao"></property>
+	</bean>
+	<bean id="verBiz" class="sdaac.wym.dms.biz.VersionBiz">
+		<property name="myverDao" ref="verDao"></property>
+	</bean>	
+	<bean id="snapBiz" class="sdaac.wym.dms.Service.ScoreSnapBiz">
+		<property name="snapDao" ref="snapDao"></property>
+	</bean>
+	
+	<bean id="indicateService" class="sdaac.wym.dms.Service.IndicateService">
+		<property name="indicateDao" ref="indicateDao"></property>
+	</bean>
+	
+	<bean id="scoreDetailsService" class="sdaac.wym.dms.Service.ScoreDetailsService">
+		<property name="scoreDetailsDao" ref="scoreDetailsDao"></property>
+	</bean>	
+	
+	<bean id="templeteService" class="sdaac.wym.dms.Service.TempleteService">
+		<property name="templeteDao" ref="templeteDao"></property>
+	</bean>
+	
+	<bean id="workerService" class="sdaac.wym.dms.Service.WorkerService">
+		<property name="empdao" ref="empdao"></property>
+	</bean>
+	
+
+	<!-- manager -->
+	<bean id="DMSManager" class="sdaac.wym.dms.Service.DMSManager">
+		<property name="indicateService" ref="indicateService"></property>
+		<property name="ss" ref="scoreDetailsService"></property>
+		<property name="empBiz" ref="dmsEmpBiz"></property>
+		<property name="ssBiz" ref="snapBiz"></property>
+		<property name="bonusBiz" ref="bonusBiz"></property>
+		<property name="verBiz" ref="verBiz"></property>
+	</bean>
+	
+	
+</beans>

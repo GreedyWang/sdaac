@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_10"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jbpm2"/>
+	<classpathentry kind="lib" path="lib/commons/activation.jar"/>
+	<classpathentry kind="lib" path="lib/spring/2.0/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="lib/dbcp/commons-collections.jar"/>
+	<classpathentry kind="lib" path="lib/dbcp/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="lib/dbcp/commons-pool.jar"/>
+	<classpathentry kind="lib" path="lib/dwr/dwr.jar"/>
+	<classpathentry kind="lib" path="lib/commons/commons-io-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons/commons-fileupload-1.2.jar" sourcepath="lib/commons/commons-fileupload-1.2.1-src"/>
+	<classpathentry kind="lib" path="lib/quartz-1.6.4/quartz-1.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-core-2.0.4.jar" sourcepath="lib/spring/security/spring-security-taglibs-2.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-taglibs-2.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-acl-2.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/JSON/json-lib-2.2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/commons/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-core-2.0.5.RELEASE.jar" sourcepath="lib/spring/security/new/spring-security-core-2.0.5.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-core-tiger-2.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/spring-security-taglibs-2.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/new/spring.jar" sourcepath="C:/Documents and Settings/sa1kv5/.m2/repository/org/springframework/spring/2.0.8/spring-2.0.8-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/new/spring-aspects.jar"/>
+	<classpathentry kind="lib" path="lib/spring/security/new/spring-mock.jar"/>
+	<classpathentry kind="lib" path="lib/commons/mail/dsn.jar"/>
+	<classpathentry kind="lib" path="lib/commons/mail/imap.jar"/>
+	<classpathentry kind="lib" path="lib/commons/mail/mailapi.jar"/>
+	<classpathentry kind="lib" path="lib/commons/mail/pop3.jar"/>
+	<classpathentry kind="lib" path="lib/commons/mail/smtp.jar"/>
+	<classpathentry kind="lib" path="lib/jxl/jxl.jar"/>
+	<classpathentry kind="lib" path="lib/poi/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_1_CORE"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3.8.1"/>
+	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/FCKeditor-2.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-validator.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javamelody.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jrobin-1.5.9.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/msbase.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mssqlserver.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/msutil.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/wea.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sa1kv5/Desktop/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sa1kv5/Desktop/lib/jtds-1.2.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

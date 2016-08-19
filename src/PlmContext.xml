@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	
+	<bean id="mBom" class="sdaac.wym.app.Dao.plm.MBomDao" parent="plmFdao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.plm.MBom</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="mPart" class="sdaac.wym.app.Dao.plm.MPartDao" parent="plmFdao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.plm.MPart</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="eBom" class="sdaac.wym.app.Dao.plm.EBomDao" parent="plmFdao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.plm.Ebom</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="ePart" class="sdaac.wym.app.Dao.plm.EPartDao" parent="plmFdao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.plm.Epart</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="MpratplmManager" class="sdaac.wym.app.Service.plm.MpartPlmManager" >
+		<property name="partDao" ref="mPart"></property>
+		<property name="bomDao" ref="mBom"></property>
+	</bean>
+	
+	<bean id="EpratplmManager" class="sdaac.wym.app.Service.plm.EpartPlmManager" >
+		<property name="partDao" ref="ePart"></property>
+		<property name="bomDao" ref="eBom"></property> 
+	</bean>
+</beans>

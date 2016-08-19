@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- PR采购单spring配置文件 -->
+	
+	<bean id="labFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.lab.LabForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="SlabFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.lab.SLabForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="innerFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.lab.LabInnerForm</value>
+		</constructor-arg>
+	</bean>
+	<bean id="outsideFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.lab.LabOutsideForm</value>
+		</constructor-arg>
+	</bean>
+	<bean id="approveFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.lab.ApproveForm</value>
+		</constructor-arg>
+	</bean>
+	<!-- manager -->
+	<bean id="labFormBiz" class="sdaac.wym.app.Service.Lab.FormBiz">
+		<property name="formDao" ref="labFormDao"></property>
+		<property name="sformDao" ref="SlabFormDao"></property>		
+	</bean>
+	
+	<bean id="iFormBiz" class="sdaac.wym.app.Service.Lab.FormBiz">
+		<property name="formDao" ref="innerFormDao"></property>
+		<property name="sformDao" ref="SlabFormDao"></property>
+	</bean>
+	
+	<bean id="oFormBiz" class="sdaac.wym.app.Service.Lab.FormBiz">
+		<property name="formDao" ref="outsideFormDao"></property>
+		<property name="sformDao" ref="SlabFormDao"></property>
+	</bean>
+	
+	<bean id="afBiz" class="sdaac.wym.app.Service.Lab.ApproveFormBiz">
+		<property name="afDao" ref="outsideFormDao"></property>
+	</bean>
+	<!-- service -->	
+	<bean id="labRightsManager" class="sdaac.wym.common.Service.LabRightsManager">
+		<property name="roleManager" ref="roleManager"></property>
+	</bean>
+		
+	<bean id="iLabManager" class="sdaac.wym.app.Service.Lab.ILabM">
+		<property name="formBiz" ref="iFormBiz"></property>
+		<property name="afBiz" ref="afBiz"></property>
+	</bean>
+	
+	<bean id="oLabManager" class="sdaac.wym.app.Service.Lab.OLabM">
+		<property name="formBiz" ref="oFormBiz"></property>
+		<property name="afBiz" ref="afBiz"></property>
+	</bean>
+	
+	<bean id="LabManager" class="sdaac.wym.app.Service.Lab.OLabM">
+		<property name="formBiz" ref="labFormBiz"></property>
+		<property name="afBiz" ref="afBiz"></property>
+	</bean>
+
+</beans>

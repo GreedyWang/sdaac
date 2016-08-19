@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- PR采购单spring配置文件 -->
+	
+	<bean id="formDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.Room.Form</value>
+		</constructor-arg>
+	</bean>
+	<bean id="formCancelDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.Room.FormCancel</value>
+		</constructor-arg>
+	</bean>
+	<bean id="accessoryDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.Room.Accessory</value>
+		</constructor-arg>
+	</bean>
+	<bean id="roomDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.Room.Room</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	<!-- biz -->
+	<bean id="roomBiz" class="sdaac.wym.app.Service.Room.RoomBiz">
+		<property name="roomDao" ref="roomDao"></property>
+	</bean>
+	<bean id="formBiz" class="sdaac.wym.app.Service.Room.FormBiz">
+		<property name="formDao" ref="formDao"></property>
+	</bean>
+	<bean id="formCancelBiz" class="sdaac.wym.app.Service.Room.FormCancelBiz">
+		<property name="formCancelDao" ref="formCancelDao"></property>
+	</bean>
+	<bean id="accessoryBiz" class="sdaac.wym.app.Service.Room.AccessoryBiz">
+		<property name="accDao" ref="accessoryDao"></property>
+	</bean>
+
+	<!-- Service -->
+	
+	<bean id="RoomManager" class="sdaac.wym.app.Service.Room.RoomManager">
+		<property name="formBiz" ref="formBiz"></property>
+		<property name="accBiz" ref="accessoryBiz"></property>
+		<property name="formCancelBiz" ref="formCancelBiz"></property>
+	</bean>
+	
+	<bean id="rmManager" class="sdaac.wym.app.Service.Room.RoomMailManager">
+		<property name="rm" ref="RoomManager"></property>
+	</bean>
+	
+	<bean id="RoomRightsManager" class="sdaac.wym.app.Service.Room.RoomRightsManager">
+		<property name="roleManager" ref="roleManager"></property>
+	</bean>
+</beans>

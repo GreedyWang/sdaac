@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="themedao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.Ttheme</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="vave_info" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveInfo</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="proposalMoredao"  class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveProposalMore</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="proposalStateDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveProposalState</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="projectScheduleDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveProjectSchedule</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="statisticsScheduleDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveStatisticsSchedule</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="programdao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.Tprogram</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="proposaldao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.Tproposal</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="mainsugdao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.TmainSuggestion</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="othersugdao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.TotherSuggestion</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="teamWorkDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveTeamWork</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="supplyDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+		<value>app.entity.vave.VaveSupply</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="supplyBiz" class="app.biz.vave.impl.SupplyBizImpl">
+		<property name="supplyDao" ref="supplyDao"></property>
+	</bean>
+	
+	<bean id="teamWorkProjectdao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveTeamWorkProject</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="companySuggestiondao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>app.entity.vave.VaveCompanySuggestion</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="teamWorkBiz" class="app.biz.vave.impl.TeamWorkBizImpl">
+	<property name="teamWorkDao" ref="teamWorkDao"></property>
+	</bean>
+	
+	<bean id="proposalMoreBiz" class="app.biz.vave.impl.ProposalMoreBizImpl">
+	<property name="proposalMoreDao" ref="proposalMoredao"></property>
+	</bean>
+	
+	<bean id="teamWorkProjectBiz" class="app.biz.vave.impl.TeamWorkProjectBizImpl">
+	<property name="teamWorkProjectdao" ref="teamWorkProjectdao"></property>
+	</bean>
+	
+	<bean id="companySuggestionBiz" class="app.biz.vave.impl.CompanySuggestionBIzImpl">
+	<property name="companySuggestiondao" ref="companySuggestiondao"></property>
+	</bean>
+	
+	<bean id="mainsugBiz" class="app.biz.vave.impl.MainSuggestionBizImpl">
+	<property name="mainsugdao" ref="mainsugdao"></property>
+	</bean>
+	
+	<bean id="othersugBiz" class="app.biz.vave.impl.OtherSuggestionBizImpl">
+	<property name="othersugdao" ref="othersugdao"></property>
+	</bean>
+	
+	<bean id="progtambiz" class="app.biz.vave.impl.ProgramBizImpl">
+	<property name="programdao" ref="programdao"></property>
+	</bean>
+	
+	<bean id="proposalBiz" class="app.biz.vave.impl.ProposalBizImpl">
+	<property name="proporsaldao" ref="proposaldao"></property>
+	</bean>
+	
+	<bean id="themeBiz" class="app.biz.vave.impl.ThemeBizImpl">
+	<property name="themedao" ref="themedao"></property>
+	</bean>
+	
+	<bean id="projectScheduleBiz" class="app.biz.vave.impl.ProjectScheduleBizImpl">
+	<property name="projectScheduleDao" ref="projectScheduleDao"></property>
+	</bean>
+	
+	<bean id="statisticsScheduleBiz" class="app.biz.vave.impl.StatisticsScheduleBizImpl">
+	<property name="statisticsScheduleDao" ref="statisticsScheduleDao"></property>
+	<property name="projectScheduleDao" ref="projectScheduleDao"></property>
+	</bean>
+	
+	<bean id="proposalStateBiz" class="app.biz.vave.impl.ProposalStateBizImpl">
+	<property name="proposalStateDao" ref="proposalStateDao"></property>
+	</bean>
+	
+	<bean id="vave_infoBiz" class="app.biz.vave.impl.VaveInfoBizImpl">
+	<property name="vaveInfoDao" ref="vave_info"></property>
+	</bean>
+	
+	<bean id="pointsDetailsDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.PointsDetails</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="pointsDetailsManger" class="sdaac.wym.app.Service.vave.PointsDetailsManager">
+	<property name="pointsdetailsDao" ref="pointsDetailsDao"></property>
+	</bean>
+	
+	<bean id="businessTopicDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.BusinessTopic</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="businessTopicManager" class="sdaac.wym.app.Service.vave.BusinessTopicManager">
+	<property name="businessTopicDao" ref="businessTopicDao"></property>
+	</bean>
+	
+	<bean id="ApproveRateManager" class="sdaac.wym.app.Service.vave.ApprovedRateManager">
+	<property name="sqlBiz" ref="personalPjdbc"></property>
+	</bean>
+	
+	<!-- vave纪念品 -->
+	<bean id="goodsDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.Goods</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="accountDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.Account</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="accountGoodsDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.AccountGoods</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="goodsManager" class="sdaac.wym.app.Service.vave.GoodsManager">
+		<property name="accountDao" ref="accountDao"></property>
+		<property name="accountGoodsDao" ref="accountGoodsDao"></property>
+		<property name="empDao" ref="empdao"></property>
+		<property name="goodsDao" ref="goodsDao"></property>
+	</bean>
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- SAP Reporting spring配置文件 -->
+	<bean id="BomDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.SAP.SapBom</value>
+		</constructor-arg>
+	</bean>
+	<bean id="priceDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.SAP.Price</value>
+		</constructor-arg>
+	</bean>	
+	<bean id="materialPriceDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.SAP.SrMaterialPrice</value>
+		</constructor-arg>
+	</bean>	
+	
+	<!-- Biz -->
+	<bean id="BomBiz" class="sdaac.wym.app.Service.SAP.BomBiz">
+		<property name="bomDao" ref="BomDao"></property>
+	</bean>
+	<bean id="PriceBiz" class="sdaac.wym.app.Service.SAP.PriceBiz">
+		<property name="priceDao" ref="priceDao"></property>
+	</bean>
+	<bean id="MPBiz" class="sdaac.wym.app.Service.SAP.MPBiz">
+		<property name="materialPriceDao" ref="materialPriceDao"></property>
+	</bean>
+	
+	<!-- service -->
+	<bean id="SapBomManager" class="sdaac.wym.app.Service.SAP.SapBomManager">
+		<property name="priceBiz" ref="PriceBiz"></property>
+		<property name="bomBiz" ref="BomBiz"></property>
+		<property name="mpBiz" ref="MPBiz"></property>
+	</bean>
+	
+</beans>

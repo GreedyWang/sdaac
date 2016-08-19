@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!-- 权限 -->
+	<bean id="userRoleDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>common.entity.TuserRole</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="functionDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>common.entity.Tfunction</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="roleDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>common.entity.Trole</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="roleFunctionDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>common.entity.TroleFunction</value>
+	</constructor-arg>
+	</bean>		
+	
+	<bean id="roleFunctionBiz" class="com.security.biz.impl.RoleFunctionBizImpl">
+	<property name="roleFunDao" ref="roleFunctionDao"></property>	
+	</bean>
+	
+	<bean id="userRoleBiz" class="com.security.biz.impl.UserRoleBizImpl">
+	<property name="userRoleDao" ref="userRoleDao"></property>
+	</bean>
+	
+	<bean id="roleBiz" class="com.security.biz.impl.RoleBizImpl">
+	<property name="roleDao" ref="roleDao"></property>
+	</bean>
+	
+	<bean id="roleManager" class="sdaac.wym.common.Service.RoleManager">
+		<property name="userRoleDao" ref="userRoleDao"></property>
+		<property name="roleBiz" ref="roleBiz"></property>
+		<property name="userRoleBiz" ref="userRoleBiz"></property>
+	</bean>
+	
+	<bean id="PrRightsManager" class="sdaac.wym.common.Service.PrRightsManager">
+		<property name="roleManager" ref="roleManager"></property>
+	</bean>
+	<!-- 权限end -->
+	
+	<bean id="OrganizationStructureDao" class="sdaac.wym.app.Dao.hr.OrganizationStructureDao" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.hr.OrganizationStructure</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="osManager" class="sdaac.wym.app.Service.OSManager">
+	<property name="osDAO" ref="OrganizationStructureDao"></property>
+	</bean>
+
+	<bean id="SuggestDao" class="sdaac.wym.app.Dao.vave.SuggestDao" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>sdaac.wym.app.entity.vave.Suggestion</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="proposalManager" class="sdaac.wym.app.Service.vave.ProposalManager">
+	<property name="sugDao" ref="SuggestDao"></property>
+	</bean>
+	
+	
+	
+	<!-- 邮件 -->
+	<bean id="mailDao" class="sdaac.wym.app.Dao.vave.SuggestDao" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+	<value>common.entity.MyMail</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="MMMailManager" class="sdaac.wym.common.Service.Mail.MMMailManager">
+		<property name="mana" ref="Manager"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="mailProvider4NPR" class="com.sdaac.pr.MailProvider4NPR">
+		<property name="urBiz" ref="userRoleBiz"></property>
+		<property name="processEng" ref="prProcessEngine"></property>
+		<property name="formService" ref="formService"></property>
+	</bean>
+	
+	<bean id="mailBiz" class="com.security.biz.impl.MailManager">
+		<property name="myMailDao" ref="mailDao"></property>
+		<property name="prMailManager" ref="PRMailManager"></property>
+		<property name="rmManager" ref="rmManager"></property>
+		<property name="mmMailManager" ref="MMMailManager"></property>	
+		<property name="prAll" ref="PRAll"></property>	
+		<property name="prDep" ref="PRDepartment"></property>	
+		<property name="prBuyer" ref="PRBuyer"></property>	
+		<property name="prProject" ref="PRProject"></property>	
+		<property name="prSelf" ref="PRSelf"></property>
+		<property name="npr" ref="mailProvider4NPR"></property>
+	</bean>
+	
+	<bean id="PRAll" class="common.util.mail.PRAll">
+		<property name="prFormDao" ref="prFormDao"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="PRDepartment" class="common.util.mail.PRDepartment">
+		<property name="prFormDao" ref="prFormDao"></property>		
+	</bean>
+	
+	<bean id="PRBuyer" class="common.util.mail.PRBuyer">
+		<property name="prFormDao" ref="prFormDao"></property>		
+	</bean>
+	
+	<bean id="PRProject" class="common.util.mail.PRProject">
+		<property name="prFormDao" ref="prFormDao"></property>		
+	</bean>
+	
+	<bean id="PRSelf" class="common.util.mail.PRSelf">
+		<property name="prFormDao" ref="prFormDao"></property>		
+	</bean>	
+	<!-- APP环境变量 -->
+	<bean id="confDao" class="sdaac.wym.app.Dao.conf.ConfDao" parent="dao">
+	<constructor-arg index="0" type="java.lang.String">
+		<value>sdaac.wym.app.entity.conf.Conf</value>
+	</constructor-arg>
+	</bean>
+	
+	<bean id="confManager" class="sdaac.wym.app.Service.ConfManager">
+		<property name="confDao" ref="confDao"></property>
+	</bean>
+	
+	<!-- 同步employee表	
+	<bean id="empSource" class="common.dao.impl.CommonSpringDAOImpl" parent="hrDao">
+		<constructor-arg index="0" type="java.lang.String">
+		<value>sdaac.wym.app.entity.hr.EmpSource</value>
+		</constructor-arg>
+	</bean>	
+
+	<bean id="empSourceManager" class="sdaac.wym.app.Hr.EmpSourceManager">
+		<property name="empDao" ref="empdao"></property>
+		<property name="empSourceDao" ref="empSource"></property>
+	</bean>
+	-->	
+	
+	<!-- 财务日志 -->
+	<bean id="cwLogsDao" class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+		<value>sdaac.wym.app.entity.cw.CwLogs</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="gmTaxManager" class="sdaac.wym.app.Service.cw.GmTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+		<!-- <property name="logsDao" value="null"></property> -->
+	</bean>
+	
+	<bean id="lmTaxManager" class="sdaac.wym.app.Service.cw.LmTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<bean id="bSTaxManager" class="sdaac.wym.app.Service.cw.BSTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<bean id="dYTaxManager" class="sdaac.wym.app.Service.cw.DYTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<bean id="xdyTaxManager" class="sdaac.wym.app.Service.cw.XdyTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<bean id="ordinaryTaxManager" class="sdaac.wym.app.Service.cw.OrdinaryTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<bean id="poTaxManager" class="sdaac.wym.app.Service.cw.PoTaxManager">
+		<property name="cwLogsDao" ref="cwLogsDao"></property>
+	</bean>
+	
+	<!-- excel导入日产量记录 -->
+	<bean id="dataImportManager" class="test.DataImport">
+		<property name="bfBiz" ref="bfBiz"></property>
+		<property name="ppBiz" ref="ppBiz"></property>
+		<property name="empBiz" ref="empBiz"></property>
+	</bean>
+	
+	<!-- HR 加班时间统计 -->
+	<bean id="overtimeManager" class="sdaac.wym.app.Hr.OvertimeManager">
+		<property name="sqlDao" ref="sondao"></property>
+	</bean>
+	<!-- 报表 -->
+	<bean id="PCLPostingDateReport" class="common.util.Reports.PCLPostingDate">
+		<property name="buyContextBiz" ref="PrBuyContextBizImpl"></property>
+		<property name="prFormBiz" ref="prFormBiz"></property>
+	</bean>
+	
+	<bean id="ApprovedDate" class="common.util.Reports.ApprovedDate">
+		<property name="buyContextBiz" ref="PrBuyContextBizImpl"></property>
+		<property name="prFormBiz" ref="prFormBiz"></property>
+		<property name="approveBiz" ref="prApprovedFormBiz"></property>
+	</bean>
+	
+	<bean id="R4PR" class="common.util.Reports.R4PR">
+		<property name="buyContextBiz" ref="PrBuyContextBizImpl"></property>
+		<property name="prFormBiz" ref="prFormBiz"></property>
+	</bean>
+</beans>

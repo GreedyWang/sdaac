@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <joined-subclass name="sdaac.wym.app.entity.lab.LabInnerForm" table="LAB_innerForm" extends="sdaac.wym.app.entity.lab.LabForm" schema="dbo" catalog="EPR">
+       	<key column="idfk" />
+        <property name="id" type="java.lang.Integer" insert = "false">
+            <column name="id" />
+        </property>
+        <property name="applicantPhone" type="java.lang.String">
+            <column name="applicantPhone" length="50" />
+        </property>
+       
+        <property name="goodsSn" type="java.lang.String">
+            <column name="goodsSN" length="50" />
+        </property>
+        <property name="goodsFigure" type="java.lang.String">
+            <column name="goodsFigure" length="50" />
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" />
+        </property>
+        <property name="testingAim" type="java.lang.String">
+            <column name="testingAim" length="50" />
+        </property>
+        <property name="testingDesc" type="java.lang.String">
+            <column name="testingDesc" length="50" />
+        </property>
+        <property name="factory" type="java.lang.String">
+            <column name="factory" length="50" />
+        </property>
+       
+        <property name="standard" type="java.lang.String">
+            <column name="standard" length="50" />
+        </property>
+        <property name="standardFile" type="java.lang.String">
+            <column name="standardFile" length="50" />
+        </property>
+        <property name="requiredFinishDate" type="java.util.Date">
+            <column name="requiredFinishDate" length="23" />
+        </property>
+        <property name="costTime" type="java.lang.String">
+            <column name="costTime" length="50" />
+        </property>
+        <property name="hasReport" type="java.lang.Byte">
+            <column name="hasReport" />
+        </property>
+        <property name="sendedDate" type="java.util.Date">
+            <column name="sendedDate" length="23" />
+        </property>
+        <property name="dealinfo" type="java.lang.String">
+            <column name="dealinfo" length="50" />
+        </property>
+        <property name="secrecyRequire" type="java.lang.String">
+            <column name="secrecyRequire" length="50" />
+        </property>
+        <property name="a1" type="java.lang.String">
+            <column name="a1" length="50" />
+        </property>
+        <property name="a2" type="java.lang.String">
+            <column name="a2" length="50" />
+        </property>
+        <property name="a3" type="java.lang.String">
+            <column name="a3" length="50" />
+        </property>
+        <property name="a4" type="java.lang.String">
+            <column name="a4" length="50" />
+        </property>
+        <property name="facilityId" type="java.lang.Integer">
+            <column name="facilityId" />
+        </property>
+        <property name="fpt" type="java.util.Date">
+            <column name="fpt" length="23" />
+        </property>
+        <property name="fgt" type="java.util.Date">
+            <column name="fgt" length="23" />
+        </property>
+        <property name="totalmoney" type="java.lang.Long">
+            <column name="totalmoney" precision="18" scale="0" />
+        </property>
+        <property name="fis" type="java.lang.String">
+            <column name="fis" length="50" />
+        </property>
+        <property name="fcf" type="java.lang.String">
+            <column name="fcf" length="50" />
+        </property>
+        <property name="fcfd" type="java.util.Date">
+            <column name="fcfd" length="23" />
+        </property>
+        <property name="contactSn" type="java.lang.String">
+            <column name="contactSN" length="50" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

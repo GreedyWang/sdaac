@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- PR采购单spring配置文件 -->
+	
+	<bean id="baseformDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.PCL.MainData.BaseForm</value>
+		</constructor-arg>
+	</bean>
+	<bean id="approveFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.Service.PCL.MainData.ApproveForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<!-- service -->
+	<bean id="FormService" class="sdaac.wym.app.Service.PCL.MainData.FormService">
+		<property name="formDao" ref="baseformDao"></property>
+	</bean>
+	
+	<bean id="MDFormService" class="sdaac.wym.app.Service.PCL.MainData.MDFormService">
+		<property name="formDao" ref="baseformDao"></property>
+	</bean>
+	
+	<!-- manager -->
+	<bean id="ApproveManager" class="sdaac.wym.app.Service.PCL.MainData.ApproveManager">
+		<property name="approveFormDao" ref="approveFormDao"></property>
+		<property name="formService" ref="MDFormService"></property>
+	</bean>
+	
+	<bean id="Manager" class="sdaac.wym.app.Service.PCL.MainData.Manager">
+		<property name="formService" ref="MDFormService"></property>
+	</bean>
+	
+	<bean id="MDRightsManager" class="sdaac.wym.common.Service.MDRightsManager">
+		<property name="roleManager" ref="roleManager"></property>
+	</bean>
+
+</beans>

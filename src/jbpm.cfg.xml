@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jbpm-configuration>
+
+	<import resource="jbpm.default.cfg.xml" />
+	<import resource="jbpm.businesscalendar.cfg.xml" />
+	<import resource="jbpm.tx.spring.cfg.xml" />
+	<import resource="jbpm.jpdl.cfg.xml" />
+	<import resource="jbpm.bpmn.cfg.xml" />
+	<import resource="jbpm.identity.cfg.xml" />
+	<!-- Job executor is excluded for running the example test cases. -->
+	<!-- To enable timers and messages in production use, this should be included. -->
+	<!--
+		<import resource="jbpm.tx.hibernate.cfg.xml" />
+		<import resource="jbpm.jobexecutor.cfg.xml" />
+		<import resource="jbpm.tx.spring.cfg.xml" />
+		
+		//		String smtphost = "mail.sdaac.com"; // 发送邮件服务器
+		//		String user = "helpdesk@sdaac.com"; // 邮件服务器登录用户名
+		//		String password = "sdaac=0987"; // sdaac=0987邮件服务器登录密码
+		//		String from = "helpdesk@sdaac.com"; 
+	-->
+
+
+	<process-engine-context>
+		<mail-template name="my-template">
+			<from addresses="helpdesk@sdaac.com" />
+			<to addresses="510721771@qq.com" />
+			<subject>PR Reject Tip</subject>
+			<text>test</text>
+		</mail-template>
+	</process-engine-context>
+
+
+	<transaction-context>
+		<mail-session>
+			<mail-server>
+			<!-- 
+				<session-properties>
+					<property name="mail.stmp.host"
+						value="mail.sdaac.com" />
+					<property name="mail.stmp.port" value="25" />
+					<property name="mail.from"
+						value="helpdesk@sdaac.com" />
+						
+				</session-properties>
+			 -->
+				 <session-properties resource="jbpm.mail.properties" /> 
+				<authenticator class="com.sdaac.pr.MyAuthenticator" /> 
+			</mail-server>
+		</mail-session>
+	</transaction-context>
+
+</jbpm-configuration>
+

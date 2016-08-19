@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.0.xsd ">
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="net.sourceforge.jtds.jdbc.Driver" />
+		
+ 		<property name="url" value="jdbc:jtds:sqlserver://10.243.75.15:1433/EPR" /> <!-- 10.243.75.15 /epr /epr=1234-->
+  		<property name="username" value="epr" /> 
+  		<property name="password" value="epr=1234" /> 
+
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+
+	</bean>
+	<!-- JBPM -->
+
+	<bean id="springHelper"
+		class="com.sdaac.pr.ProcessEngineFactoryBean">
+		<property name="sessionFactory" ref="SessionFactory"></property>
+	</bean>
+
+	<bean id="processEngine" factory-bean="springHelper"
+		factory-method="createProcessEngine" />
+
+	<bean id="SessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					common.util.PmDb2Dialect
+				</prop>
+				 <prop key="hibernate.hbm2ddl.auto">update</prop>	
+				<prop key="jdbc.batch_size">20</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- plm db -->
+	<bean id="plm" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.microsoft.jdbc.sqlserver.SQLServerDriver">
+		</property>
+		<property name="url"
+			value="jdbc:microsoft:sqlserver://10.243.75.15:1433">
+		</property>
+		<property name="defaultCatalog">
+			<value>PLM</value>
+		</property>
+		<property name="username" value="bpp"></property>
+		<property name="password" value="bpp"></property>
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+	</bean>
+
+	<bean id="SessionFactoryPLM"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="plm" />
+		</property>
+		<property name="configLocation">
+			<value>classpath:hibernatePLM.cfg.xml</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="plmFdao" class="common.dao.impl.CommonSpringDAOImpl"
+		abstract="true">
+		<property name="sessionFactory" ref="SessionFactoryPLM"></property>
+	</bean>
+
+
+	<!-- hr db -->
+	<bean id="HR" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.microsoft.jdbc.sqlserver.SQLServerDriver">
+		</property>
+		<property name="url"
+			value="jdbc:microsoft:sqlserver://10.243.75.15:1433">
+		</property>
+		<property name="defaultCatalog">
+			<value>eHRsoft</value>
+		</property>
+		<property name="username" value="bpp"></property>
+		<property name="password" value="bpp"></property>
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+	</bean>
+	<bean id="SessionFactoryHR"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="HR" />
+		</property>
+		<property name="configLocation">
+			<value>classpath:hibernateHR.cfg.xml</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="hrDao" class="common.dao.impl.CommonSpringDAOImpl"
+		abstract="true">
+		<property name="sessionFactory" ref="SessionFactoryHR"></property>
+	</bean>
+
+
+	<bean id="personalPjdbc"
+		class="app.biz.impl.PersonalPBizJdbcImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="empdao" ref="conutdao"></property>
+		<property name="departBiz" ref="departBiz"></property>
+	</bean>
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="dao" class="common.dao.impl.CommonSpringDAOImpl"
+		abstract="true">
+		<property name="sessionFactory" ref="SessionFactory"></property>
+	</bean>
+
+
+	<import resource="CommonContext.xml" />
+
+	<!-- VAVE -->
+	<import resource="VaveContext.xml" />
+	<!-- 采购审批 -->
+	<import resource="ePorContext.xml" />
+	<!-- DMS -->
+	<import resource="DMSContext.xml" />
+	<!-- PLM -->
+	<import resource="PlmContext.xml" />
+	<!-- SDAAC内部系统 -->
+	<import resource="NewsContext.xml" />
+	<!-- 会议室预定 -->
+	<import resource="arContext.xml" />
+	<!-- 实验室 
+		<import resource="labContext.xml" />-->
+	<!-- KPI -->
+	<import resource="KpiContext.xml" />
+	<!-- SAP Reproting -->
+	<import resource="sapContext.xml" />
+	<!-- PCL MainData -->
+	<import resource="MainDataContext.xml" />
+	<bean id="sondao" class="app.dao.Emppdao" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TemployeeProduct</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="conutdao" class="app.dao.Emppdao" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.vave.Count</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="empdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.Tempolyee</value>
+		</constructor-arg>
+	</bean>
+	<!-- 员工队伍 -->
+	<bean id="teamworkDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TeamWork</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="workerTeamDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.WorkerTeam</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="postiddao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TpostId</value>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="postdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.Tpost</value>
+		</constructor-arg>
+	</bean>
+	<bean id="ipdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.IpTmp</value>
+		</constructor-arg>
+	</bean>
+	<bean id="userdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.Tuser</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="ppdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TemployeeProduct</value>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="ptdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.TpostType</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="bfdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.hr.BounceFigure</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="bpdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.hr.BouncePost</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="inbounceDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>sdaac.wym.app.entity.hr.Inbound</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="empBiz" class="app.biz.impl.EmpBizImpl">
+		<property name="empdao" ref="empdao"></property>
+		<property name="teamWorkDao" ref="teamworkDao"></property>
+		<property name="workerTeamDao" ref="workerTeamDao"></property>
+	</bean>
+
+	<bean id="userBiz" class="app.biz.impl.UserBizImpl">
+		<property name="userdao" ref="userdao"></property>
+	</bean>
+
+	<bean id="ipTmpBiz" class="app.biz.impl.IPTmpBizImpl">
+		<property name="ipdao" ref="ipdao"></property>
+	</bean>
+
+	<bean id="postBiz" class="app.biz.impl.PostBizImpl">
+		<property name="postdao" ref="postdao"></property>
+		<property name="postIdDao" ref="postiddao"></property>
+	</bean>
+
+	<bean id="postIdBiz" class="app.biz.impl.PostIdBizImpl">
+		<property name="postIDdao" ref="postiddao"></property>
+	</bean>
+
+	<bean id="departBiz" class="app.biz.impl.DepartmentBizImpl">
+		<property name="departdao" ref="departdao"></property>
+	</bean>
+
+
+
+	<bean id="ppBiz" class="app.biz.impl.PersonalPBizImpl">
+		<property name="employeeProductdao" ref="ppdao"></property>
+		<property name="empdao" ref="sondao"></property>
+	</bean>
+	<!-- 图号 -->
+	<bean id="bfBiz" class="sdaac.wym.app.Hr.BounceFigureImpl">
+		<property name="bfDao" ref="bfdao"></property>
+		<property name="bpDao" ref="bpdao"></property>
+		<property name="postdao" ref="postdao"></property>
+		<property name="inboundDao" ref="inbounceDao"></property>
+	</bean>
+
+	<bean id="bpBiz" class="sdaac.wym.app.Hr.BouncePostImpl">
+		<property name="bpDao" ref="bpdao"></property>
+	</bean>
+
+	<bean id="biBiz" class="sdaac.wym.app.Hr.BounceInboundImpl">
+		<property name="inboundDao" ref="inbounceDao"></property>
+	</bean>
+
+	<!-- dao log  -->
+	<bean id="logdao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.Logs</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="DAOLog" class="app.biz.impl.LogsBizImpl">
+		<property name="logdao" ref="logdao"></property>
+	</bean>
+
+
+	<!-- AOP LOG -->
+	<bean id="AopLog" class="app.common.AopLog"></bean>
+
+	<bean id="LogService"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="ppBiz"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>AopLog</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="ptBiz" class="app.biz.impl.PostTypeBizImpl">
+		<property name="postTypedao" ref="ptdao"></property>
+	</bean>
+
+	<!-- Mailquartz  <property name="cronExpression" value="0 */1 * * * 1-5" />-->
+
+	<bean name="MailJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mailBiz"></property>
+		<property name="targetMethod">
+			<value>sendMail</value>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="MailJob" />
+		<!-- 每天14点 -->
+		<property name="cronExpression" value="0 0 14 * * ?" />
+	</bean>
+
+
+
+	<bean id="scheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+				
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<bean id="organizationManager"
+		class="sdaac.wym.app.Hr.OrganizationManager">
+		<property name="empdao" ref="empdao"></property>
+	</bean>
+
+
+	<!-- define TransactionManager
+		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="DataSource"></property>
+		</bean> -->
+
+	<!-- 定义事务管理器 -->
+	<bean id="myTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+
+	<!-- 2.x 声明式事务代理模板 -->
+	<tx:advice id="txAdvice"
+		transaction-manager="myTransactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="ma*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="do*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="SUPPORTS" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="bizMethods"
+			expression="execution(* app.biz.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" />
+	</aop:config>
+	<!-- sdaac.wym.app.Service-->
+	<aop:config>
+		<aop:pointcut id="bizMethods3"
+			expression="execution(* app.biz.impl.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods3" />
+	</aop:config>
+
+	<!-- sdaac.wym.app.Service-->
+	<aop:config>
+		<aop:pointcut id="bizMethods2"
+			expression="execution(* sdaac.wym.app.*.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods2" />
+	</aop:config>
+
+	<!-- osiv 
+		<bean id="openSessionInViewInterceptor"
+		class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		</bean>
+		
+		<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="interceptors" ref="openSessionInViewInterceptor"/>
+		<property name="mappings">
+		<props>
+		......
+		</props>
+		</property>
+		</bean>
+	-->
+
+
+</beans>

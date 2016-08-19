@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<authors>
+    <categroy menu="y" name="Fyodor" last="Dostoevsky" image="m">
+        <app name="Crime and Punishment"  url="http://www.amazon.com/Crime-Punishment-Fyodor-Dostoevsky/dp/0679734503/">
+            Raskolnikov, a destitute and desperate former student, commits a random murder without remorse or regret, imagining himself to be a great man far above moral law. But as he embarks on a dangerous cat-and-mouse game with a suspicious police investigator, his own conscience begins to torment him. 
+        </app>
+        <app name="The Brothers Karamazov"  url="http://www.amazon.com/Brothers-Karamazov-Fyodor-Dostoevsky/dp/0374528373/">
+            Driven by intense, uncontrollable emotions of rage and revenge, the Karamozov brothers become involved in the brutal murder of their despicable father. It is a love-hate struggle with profound psychological and spiritual implications.
+        </app>
+    </categroy>
+    
+</authors>

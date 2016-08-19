@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- PR采购单spring配置文件 -->	
+	<bean id="singleFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.forms.SingleForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="approvedFormDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrApprovedForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="authorizedDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.AuthorizedForm</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="buyerListDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrBuyerList</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="projectDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrProject</value>
+		</constructor-arg>
+	</bean>
+	<bean id="prFormLogsDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrFormLogs</value>
+		</constructor-arg>
+	</bean>
+	<bean id="supplyDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PRSupply</value>
+		</constructor-arg>
+	</bean>	
+	<bean id="buyContextLogsDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.BuyContextLogs</value>
+		</constructor-arg>
+	</bean>
+	<bean id="subjectDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.Subject</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="buyContextDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrBuyContext</value>
+		</constructor-arg>
+	</bean>
+	<bean id="buyerDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrBuyer</value>
+		</constructor-arg>
+	</bean>
+	<bean id="costCenterDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrCostCenter</value>
+		</constructor-arg>
+	</bean>
+	<bean id="prFormDao" class="common.dao.impl.CommonSpringDAOImpl"
+		parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrPrForm</value>
+		</constructor-arg>
+	</bean>
+	<bean id="prFormStateDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrPrFormState</value>
+		</constructor-arg>
+	</bean>
+	<bean id="paydetailsDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.Paydetails</value>
+		</constructor-arg>
+	</bean>
+	<bean id="subjectDetailDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.SubjectDetail</value>
+		</constructor-arg>
+	</bean>	
+	
+	<bean id="rejectTypeDao"
+		class="common.dao.impl.CommonSpringDAOImpl" parent="dao">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>app.entity.epor.PrRejectType</value>
+		</constructor-arg>
+	</bean>		
+	<!-- manager -->		
+	<bean id="PrBuyContextBizImpl" class="app.biz.impl.epor.PrBuyContextBizImpl">
+		<property name="prBuyContextDao" ref="buyContextDao"></property>
+	</bean>
+	<bean id="supplyService" class="app.biz.impl.epor.SupplyService">
+		<property name="supplyDao" ref="supplyDao"></property>
+	</bean>
+	<bean id="rejectTypeManager" class="app.biz.impl.epor.RejectTypeManager">
+		<property name="rejectTypeDao" ref="rejectTypeDao"></property>
+	</bean>
+		
+	<bean id="projectManager" class="app.biz.impl.epor.PrProjectManager">
+		<property name="projectDao" ref="projectDao"></property>
+	</bean>
+
+	<bean id="subjectDetailService" class="app.biz.impl.epor.SubjectDetailService">
+		<property name="subjectDetailDao" ref="subjectDetailDao"></property>
+		<property name="prformDao" ref="prFormDao"></property>
+	</bean>
+		
+	<bean id="PaydetailsService" class="app.biz.impl.epor.PaydetailsService">
+		<property name="paydetailsDao" ref="paydetailsDao"></property>
+	</bean>
+	
+	<bean id="subjectManager" class="app.biz.impl.epor.SubjectManager">
+		<property name="subjectDao" ref="subjectDao"></property>
+	</bean>
+	<bean id="costCenterManager" class="app.biz.impl.epor.CostCentreManager">
+		<property name="costCentreDao" ref="costCenterDao"></property>
+	</bean>
+	<bean id="buyerManager" class="app.biz.impl.epor.PrBuyerManager">
+		<property name="buyerDao" ref="buyerDao"></property>
+	</bean>
+
+	<bean id="formService" class="app.biz.impl.epor.FormService">
+		<property name="prFormDao" ref="prFormDao"></property>
+		<property name="buyContext" ref="buyContextDao"></property>
+		<property name="singleFormDao" ref="singleFormDao"></property>
+	</bean>
+	
+		<bean id="prFormStateBiz"
+		class="app.biz.impl.epor.PrFormStateBizImpl">
+		<property name="prFormState" ref="prFormStateDao"></property>
+	</bean>
+	
+	<bean id="prApprovedFormBiz"
+		class="app.biz.impl.epor.PrApprovedFormBizImpl">
+		<property name="prApprovedFormDao" ref="approvedFormDao"></property>
+		<property name="formService" ref="formService"></property>
+			<property name="buyerManager" ref="buyerManager"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="prApprovedFormBizSY"
+		class="app.biz.impl.epor.PRApproveManagertoSY">
+		<property name="prApprovedFormDao" ref="approvedFormDao"></property>
+		<property name="formService" ref="formService"></property>
+			<property name="buyerManager" ref="buyerManager"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="prApprovedFormBizYanTai"
+		class="app.biz.impl.epor.PRApproveManagertoYanTai">
+		<property name="prApprovedFormDao" ref="approvedFormDao"></property>
+		<property name="formService" ref="formService"></property>
+			<property name="buyerManager" ref="buyerManager"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="prApprovedFormBizSH"
+		class="app.biz.impl.epor.PRApproveManagertoSHPlant">
+		<property name="prApprovedFormDao" ref="approvedFormDao"></property>
+		<property name="formService" ref="formService"></property>
+			<property name="buyerManager" ref="buyerManager"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<!-- jbpm enginee-->
+	<bean id="prProcessEngine" class="com.sdaac.pr.approve.PRProcessEngine">
+		<property name="processEngine" ref="processEngine"></property>
+	</bean>
+	
+	<bean id="tools" class="com.sdaac.pr.tools.Tools">
+		<property name="processEng" ref="prProcessEngine"></property>
+	</bean>
+	<!-- service jbpm-->
+	<bean id="prFormBiz" class="app.biz.impl.epor.PrFormBizImpl">
+		<property name="formService" ref="formService"></property>
+		<property name="prFromState" ref="prFormStateDao"></property>
+		<property name="buyerManager" ref="buyerManager"></property>
+		<property name="subjectManager" ref="subjectManager"></property>
+		<property name="projectManager" ref="projectManager"></property>
+		<property name="costCentreManager" ref="costCenterManager"></property>
+		<property name="prApprovedManager" ref="prApprovedFormBiz"></property>
+		<property name="buyContextLogs" ref="buyContextLogsDao"></property>
+		<property name="logsDao" ref="prFormLogsDao"></property>
+		<property name="empBiz" ref="empBiz"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+		<property name="paydetailsService" ref="PaydetailsService"></property>
+		<property name="orgManager" ref="orgManager"></property>
+		<property name="supplyDao" ref="supplyDao"></property>
+		<property name="processEng" ref="prProcessEngine"></property>
+	</bean>
+	
+	<bean id="prSYFormBiz" class="app.biz.impl.epor.PrFormBizImpl">
+		<property name="formService" ref="formService"></property>
+		<property name="prFromState" ref="prFormStateDao"></property>
+		<property name="buyerManager" ref="buyerManager"></property>
+		<property name="subjectManager" ref="subjectManager"></property>
+		<property name="projectManager" ref="projectManager"></property>
+		<property name="costCentreManager" ref="costCenterManager"></property>
+		<property name="prApprovedManager" ref="prApprovedFormBizSY"></property>
+		<property name="buyContextLogs" ref="buyContextLogsDao"></property>
+		<property name="logsDao" ref="prFormLogsDao"></property>
+		<property name="empBiz" ref="empBiz"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="prYTFormBiz" class="app.biz.impl.epor.PrFormBizImpl">
+		<property name="formService" ref="formService"></property>
+		<property name="prFromState" ref="prFormStateDao"></property>
+		<property name="buyerManager" ref="buyerManager"></property>
+		<property name="subjectManager" ref="subjectManager"></property>
+		<property name="projectManager" ref="projectManager"></property>
+		<property name="costCentreManager" ref="costCenterManager"></property>
+		<property name="prApprovedManager" ref="prApprovedFormBizYanTai"></property>
+		<property name="buyContextLogs" ref="buyContextLogsDao"></property>
+		<property name="logsDao" ref="prFormLogsDao"></property>
+		<property name="empBiz" ref="empBiz"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+
+	<bean id="prSHFormBiz" class="app.biz.impl.epor.PrFormBizImpl">
+		<property name="formService" ref="formService"></property>
+		<property name="prFromState" ref="prFormStateDao"></property>
+		<property name="buyerManager" ref="buyerManager"></property>
+		<property name="subjectManager" ref="subjectManager"></property>
+		<property name="projectManager" ref="projectManager"></property>
+		<property name="costCentreManager" ref="costCenterManager"></property>
+		<property name="prApprovedManager" ref="prApprovedFormBizSH"></property>
+		<property name="buyContextLogs" ref="buyContextLogsDao"></property>
+		<property name="logsDao" ref="prFormLogsDao"></property>
+		<property name="empBiz" ref="empBiz"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>			
+	</bean>
+		
+	<bean id="PRMailManager" class="app.biz.impl.epor.PRMailManager">
+		<property name="prFormDao" ref="prFormDao"></property>
+		<property name="rightsManager" ref="PrRightsManager"></property>
+	</bean>
+	
+	<bean id="orgManager" class="com.sdaac.common.org.OrgManager">
+		<property name="empBiz" ref="empBiz"></property>
+		<property name="rm" ref="roleManager"></property>
+	</bean>
+		
+	<bean id="PuyerListBiz" class="app.biz.impl.epor.PuyerListBiz">
+		<property name="prFormDao" ref="buyerListDao"></property>
+	</bean>
+	
+	<bean id="AuthorizedFormBiz" class="app.biz.impl.epor.AuthorizedImpl">
+		<property name="formService" ref="formService"></property>
+		<property name="processEng" ref="prProcessEngine"></property>
+		<property name="authorizedFormDao" ref="authorizedDao"></property>
+	</bean>
+</beans>

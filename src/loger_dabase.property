@@ -1,0 +1,9 @@
+log4j.rootLogger=INFO,DATABASE   
+log4j.addivity.org.apache=true   
+log4j.appender.DATABASE=org.apache.log4j.jdbc.JDBCAppender   
+log4j.appender.DATABASE.URL=jdbc:microsoft:sqlserver://10.243.75.71:1433
+log4j.appender.DATABASE.driver=com.microsoft.jdbc.sqlserver.SQLServerDriver
+log4j.appender.DATABASE.user=hr1
+log4j.appender.DATABASE.password=hr1
+log4j.appender.DATABASE.sql=insert into logs VALUES ('%d{yyyy-MM-dd HH:mm:ss}','%m')   
+log4j.appender.DATABASE.layout=org.apache.log4j.PatternLayout   
