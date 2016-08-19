@@ -62,9 +62,9 @@ public class LdapConnector implements ILdap {
 			// "CN=Gandon, Arnaud,OU=LUBAS,OU=People,DC=Europe,DC=DelphiAuto,DC=net"
 		} else if (OU.equals("SDAAC")) {
 			url = "ldap://sdaac.com:389";// Delphi Domain
-			baseDN = "OU=People,DC=sdaac,DC=com";
+			baseDN = "DC=sdaac,DC=com";
 			env.put(Context.SECURITY_PRINCIPAL, uname
-					+ "@Europe.delphiauto.net");
+					+ "@sdaac.com");
 			// "CN=Gandon, Arnaud,OU=LUBAS,OU=People,DC=Europe,DC=DelphiAuto,DC=net"
 		}
 
@@ -93,7 +93,7 @@ public class LdapConnector implements ILdap {
 			NamingEnumeration<SearchResult> ne = context.search(baseDN, filter,
 					cons);
 
-			for (; ne.hasMore();) {
+			for (; ne.hasMoreElements();) {
 				entry = ne.next();
 				Attribute pager_attribute = entry.getAttributes().get(
 						"sAMAccountName");// NetID
@@ -112,7 +112,7 @@ public class LdapConnector implements ILdap {
 
 	public static void main(String[] args) {
 		long t1 = Calendar.MILLISECOND;
-		LdapConnector t = new LdapConnector("", "", "ASIA");
+		LdapConnector t = new LdapConnector("", "", "");
 		try {
 			t.getConnect();
 		} catch (IOException e) {
@@ -122,7 +122,7 @@ public class LdapConnector implements ILdap {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String rs = t.searchByFilter("", null);
+		String rs = t.searchByFilter("", "");
 		long t2 = Calendar.MILLISECOND;
 		System.out.println("=======>TIME:" + (t2 - t1));
 		System.out.println(rs);
