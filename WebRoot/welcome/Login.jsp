@@ -75,7 +75,10 @@
 									OU
 								</LABEL>
 								<select class='textbox340' name="OU" style="color: #999;">
-									<option value="ASIA" selected="selected">
+									<option value="SDAAC" selected="selected">
+										SDAAC
+									</option>
+									<option value="ASIA">
 										ASIA
 									</option>
 									<option value="EUR">

@@ -122,8 +122,9 @@
 
 							</td>
 							<td>
-
-								<input size="60" type="text" name="singleForm.des" value="${singleForm.des}">
+								<textarea class="easyui-validatebox" rows="3" cols="25"
+									 name="singleForm.des">${singleForm.des}</textarea>
+						
 							</td>
 						</tr>
 						<tr>

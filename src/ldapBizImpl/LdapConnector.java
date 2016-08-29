@@ -112,7 +112,7 @@ public class LdapConnector implements ILdap {
 
 	public static void main(String[] args) {
 		long t1 = Calendar.MILLISECOND;
-		LdapConnector t = new LdapConnector("", "", "");
+		LdapConnector t = new LdapConnector("sa1kv5", "abc=1234", "SDAAC");
 		try {
 			t.getConnect();
 		} catch (IOException e) {
@@ -122,7 +122,7 @@ public class LdapConnector implements ILdap {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String rs = t.searchByFilter("", "");
+		String rs = t.searchByFilter("sa1kv5", "");
 		long t2 = Calendar.MILLISECOND;
 		System.out.println("=======>TIME:" + (t2 - t1));
 		System.out.println(rs);

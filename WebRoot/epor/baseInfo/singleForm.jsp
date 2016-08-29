@@ -127,9 +127,8 @@ var value = document.getElementById('prno').value;
 
 							</td>
 							<td>
-
-								<input size="80" type="text" class="easyui-validatebox"
-									data-options="required:true" name="singleForm.des">
+								<textarea type="text" class="easyui-validatebox" rows="3" cols="25"
+									data-options="required:true" name="singleForm.des"></textarea>
 							</td>
 						</tr>
 						<tr>
