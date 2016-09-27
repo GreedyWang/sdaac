@@ -1,0 +1,60 @@
+{
+	FONT-SIZE: 12px
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #666666; PADDING-TOP: 0px; FONT-FAMILY: "ËÎÌו",Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+#menu UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 15px; LINE-HEIGHT: 150%; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px
+}
+#menu_out {
+	PADDING-LEFT: 4px; BACKGROUND: url(../images/menu_left.gif) no-repeat left top; MARGIN-LEFT: auto; WIDTH: 100%; MARGIN-RIGHT: auto
+}
+#menu_in {
+	PADDING-RIGHT: 4px; BACKGROUND: url(../images/menu_right.gif) no-repeat right top
+}
+#menu {
+	BACKGROUND: url(../images/menu_bg.gif) repeat-x; HEIGHT: 70px
+}
+.menu_line {
+	BACKGROUND: url(../images/menu_line.gif) no-repeat center top; WIDTH: 8px
+}
+.menu_line2 {
+	BACKGROUND: url(../images/menu_line2.gif) no-repeat center top; WIDTH: 6px
+}
+#nav {
+	PADDING-LEFT: 5px
+}
+#nav LI {
+	FLOAT: left; HEIGHT: 35px
+}
+#nav LI A {
+	DISPLAY: block; PADDING-LEFT: 6px; BACKGROUND: url(../images/menu_on_left.gif) no-repeat left top; FLOAT: left; CURSOR: pointer; HEIGHT: 35px; TEXT-DECORATION: none
+}
+.nav_off{
+	PADDING-RIGHT: 14px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(../images/menu_on_right.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 10px; COLOR: #ffffff; LINE-HEIGHT: 14px; PADDING-TOP: 11px; TEXT-DECORATION: none
+}
+#nav LI .nav_on {
+	BACKGROUND-POSITION: left 100%
+}
+#nav LI .nav_on SPAN {
+	PADDING-RIGHT: 14px; BACKGROUND-POSITION: right 100%; PADDING-LEFT: 10px; PADDING-BOTTOM: 7px; COLOR: #333333; PADDING-TOP: 14px; TEXT-DECORATION: none
+}
+#menu_con {
+	CLEAR: both; PADDING-LEFT: 20px; TEXT-ALIGN: left
+}
+#menu_con LI {
+	MARGIN-TOP: 8px; FLOAT: left; HEIGHT: 22px
+}
+#menu_con LI A {
+	DISPLAY: block; PADDING-LEFT: 3px; BACKGROUND: url(../images/menu_on_left2.gif) no-repeat left top; FLOAT: left; CURSOR: pointer
+}
+#menu_con LI A SPAN {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(../images/menu_on_right2.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 4px; LINE-HEIGHT: 12px; PADDING-TOP: 6px
+}
+#menu_con LI A:hover {
+	BACKGROUND: url(../images/menu_on_left2.gif) no-repeat left bottom; TEXT-DECORATION: none
+}
+#menu_con LI A:hover SPAN {
+	BACKGROUND: url(../images/menu_on_right2.gif) no-repeat right bottom
+}

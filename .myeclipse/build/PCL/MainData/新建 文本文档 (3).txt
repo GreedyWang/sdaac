@@ -1,0 +1,55 @@
+<table>
+					<tr>
+						<td>
+							物料组:N100
+						</td>
+						<td>
+							库存检查： <input type="radio" name="form.checkStorage" value="">YES<input type="radio" name="" value="">NO  
+						</td>
+					</tr>
+					<tr>
+						<td>
+							MRP类型：<input type="checkbox" name="form.MRPType" value="V1(手工订单)">V1(手工订单)
+								   <input type="checkbox" name="form.MRPType" value="V2(自动订单)">V2(自动订单)
+						</td>
+						<td>
+							再订购点 ：<input type="input" name="form.reorderPlace" >
+						</td>
+						<td>
+							ND(无计划) ：<input type="checkbox" name="form.ND" >
+						</td>
+					</tr>
+					<tr>
+						<td colspan=3 >
+							批量：<input type="checkbox" name="form.bluk" value="V1(手工订单)">EX(补充到再订购点)
+								   <input type="checkbox" name="form.bluk" value="V2(自动订单)">HB(最高库存水平)
+								   <input type="checkbox" name="form.bluk" value="V2(自动订单)">FX(修正批量)
+						</td>
+					</tr>
+					<tr>
+						<td colspan=3 >
+							修正批量(如果选择FX)：<input type="input" name="form.ifFX" >
+							最高库存水平(如果选择HB):<input type="input" name="form.ifHB" >					   
+						</td>
+					</tr>
+					<tr>
+						<td>
+							标准包装(可选项)：<input type="input" name="form.standardPackage" >
+						</td>
+						<td>
+							库存地点：<input type="input" name="form.storagePlace" >
+						</td>
+						<td>
+							MRP控制者：韩建荣
+						</td>
+					</tr>
+					<tr>
+						<td colspan=3>最高库存期限(天数):<input type="input" name="form.maxPeriod" ></td>
+					</tr>
+					<tr>
+						<td>管理名字:<input type="input" name="form.manger" ></td>
+						<td>电话号码:<input type="input" name="form.managerPhone" ></td>
+						<td>日期:<input type="input" name="form.managerDate" ></td>
+					</tr>	
+		
+		</table>

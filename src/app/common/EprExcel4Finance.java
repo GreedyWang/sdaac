@@ -88,6 +88,7 @@ public class EprExcel4Finance extends WritetoExcel {
 		int TWYearTotal = 9775;
 		int THYearTotal = 15276;
 		int FourthTotal = 21498;
+		int FiveTotal = 28264;
 		if(id != null && !"".equals(id)) {
 			int a = Integer.parseInt(id.substring(0, 2));	
 			if(a == 11) {
@@ -101,6 +102,8 @@ public class EprExcel4Finance extends WritetoExcel {
 				newSsid = ssid - THYearTotal;
 			}else if(a == 15){
 				newSsid = ssid - FourthTotal;
+			}else if(a == 16){
+				newSsid = ssid - FiveTotal;
 			}
 			return a*100000000+newSsid;
 		}else {

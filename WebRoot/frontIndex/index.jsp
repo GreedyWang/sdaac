@@ -11,7 +11,7 @@
 <html>
 	<head>
 		<base href="<%=basePath%>">
-		<title>上海德尔福汽车空调系统有限公司</title>
+		<title>上海爱斯达克汽车空调系统有限公司</title>
 
 		<link rel="Shortcut Icon" href="welcome/sdaac.ico">
 		<link rel="stylesheet" href="welcome/sdaac.ico">
@@ -278,7 +278,7 @@
 		<div id="footer" height="5%">
 			<p class="right"></p>
 			<p>
-				上海德尔福汽车空调系统有限公司版权所有 地址：中国上海浦东沪南路1768号 总机：(8621)38663000
+				上海爱斯达克汽车空调系统有限公司 地址：中国上海浦东沪南路1768号 总机：(8621)38663000
 				传真：(8621)58912279 邮编：201204
 				<br />
 			</p>

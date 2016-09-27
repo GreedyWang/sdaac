@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="loginForm" type="app.web.struts.form.LoginForm" />
+	<form-bean name="empForm" type="app.web.struts.form.EmpForm"></form-bean>
+    <form-bean name="postForm" type="app.web.struts.form.PostForm" />
+    <form-bean name="personalForm" type="app.web.struts.form.PersonalForm" />
+    <form-bean name="userForm" type="app.web.struts.form.UserForm" />
+    <form-bean name="employeeProductForm" type="app.web.struts.form.EmployeeProductForm" />
+    <form-bean name="indexForm" type="app.web.struts.form.IndexForm" />
+    <form-bean name="proposalForm" type="app.web.struts.form.ProposalForm" />
+    <form-bean name="mainSuggestionForm" type="app.web.struts.form.MainSuggestionForm" />
+    <form-bean name="otherSuggestionForm" type="app.web.struts.form.OtherSuggestionForm" />
+    <form-bean name="departIndexForm" type="app.web.struts.form.DepartIndexForm" />
+    <form-bean name="empIndexForm" type="app.web.struts.form.EmpIndexForm" />
+    <form-bean name="companySuggestionForm" type="app.web.struts.form.CompanySuggestionForm" />
+    <form-bean name="taskForm" type="app.web.struts.form.TaskForm" />
+    <form-bean name="statisticsForm" type="app.web.struts.form.StatisticsForm" />
+    <form-bean name="eporForm" type="app.epor.struts.form.EporForm" />
+    <form-bean name="vaveInfoForm" type="app.web.struts.form.VaveInfoForm" />
+    <form-bean name="rightsForm" type="web.form.base.RightsForm" />
+    <form-bean name="oSForm" type="app.web.struts.form.OSForm" />
+    <form-bean name="figureAndPostIdForm" type="app.web.struts.form.FigureAndPostIdForm" />
+    <form-bean name="plmForm" type="app.web.struts.form.plm.PlmForm" />
+    <form-bean name="cwForm" type="app.web.struts.action.cw.CwForm" />
+    <form-bean name="auditForm" type="app.web.struts.form.AuditForm" />
+    <form-bean name="newsForm" type="app.web.struts.form.news.NewsForm"></form-bean>
+    <form-bean name="menuForm" type="app.web.struts.form.MenuForm" />
+    <form-bean name="businessTopicForm" type="app.web.struts.form.vave.BusinessTopicForm" />
+    <form-bean name="accountForm" type="app.web.struts.form.vave.AccountForm" />
+    <form-bean name="goodsForm" type="app.web.struts.form.vave.GoodsForm" />
+    <form-bean name="roomForm" type="app.web.struts.action.meeting.RoomSystemForm" />
+    <form-bean name="labActionForm" type="app.web.struts.action.lab.LabActionForm" />
+    <form-bean name="MainDataForm" type="app.web.struts.action.pcl.maindata.MainDataForm" />
+    <form-bean name="sapForm" type="app.web.struts.action.SAP.SapForm" />
+     <form-bean name="DMSForm" type="app.web.struts.action.dms.DMSForm" />
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="loginForm"
+      input="/form/login.jsp"
+      name="loginForm"
+      parameter="actionType"
+      path="/login"
+      scope="request"
+      type="app.web.struts.action.LoginAction" >
+      <forward name="changeLang" path="/index.jsp"></forward>
+	  <forward name="index" path="/welcome/Login.jsp"></forward>
+	  <forward name="success" path="/frontIndex/index.jsp"></forward>
+	  <forward name="vave" path="/Mainframe_vave.jsp"></forward>
+	  <forward name="company" path="/company/personal/ControlPanel.jsp"></forward>
+      <forward name="welcome" path="/welcome/Login.jsp"></forward>
+      <forward name="prMailCheck" path="/epor/Login.jsp"></forward>
+       <forward name="mailCheck" path="/login.do?actionType=mailCheck"></forward>
+      <forward name="showPR" path="/epor.do?actionType=doSelectPrForm"></forward>
+      </action>
+    <action
+      attribute="empForm"
+      name="empForm"
+      parameter="actionType"
+      path="/employee"
+      scope="request"
+      type="app.web.struts.action.EmployeeAction" >
+	  <forward name="EmpManager" path="/Manager/EmpManager.jsp"></forward>
+	   <forward name="DMSEmpManager" path="/DMS/emp/EmpManager.jsp"></forward>
+      <forward name="addEmpIndex" path="/index/DepartmentIndexShow_selectEmp.jsp"></forward>
+      <forward name="EmpAdd" path="/Manager/EmpAdd.jsp"></forward>
+      <forward name="DMSEmpAdd" path="/DMS/emp/EmpAdd.jsp"></forward>
+      <forward name="ShowEmpUid" path="/vave/util/ShowEmpUid.jsp"></forward>
+      <forward name="teamWork" path="/admin/teamWork.jsp"></forward>
+      </action>
+    <action
+      attribute="postForm"
+      input="/form/post.jsp"
+      name="postForm"
+      parameter="actionType"
+      path="/post"
+      scope="request"
+      type="app.web.struts.action.PostAction" >
+      <forward name="postAdd" path="/front/hrpost/PostAdd.jsp"></forward>
+		<forward name="postManger" path="/front/hrpost/PostManager.jsp"></forward>
+    	<forward name="postType" path="/Manager/PostSalaryConstruct.jsp"></forward>
+     	<forward name="bockPostType" path="/post.do?actionType=doSelectPostAll"></forward>
+      	<forward name="PostUpdate" path="/front/hrpost/PostUpdate.jsp"></forward>
+      </action>
+    <action
+   		attribute="personalForm"
+      input="/form/personal.jsp"
+ 		name="personalForm"
+      parameter="actionType"
+      path="/personal"
+      scope="request"
+      type="app.web.struts.action.PersonalAction" >
+	<forward name="PostSalary" path="/salary/PostSalary.jsp"></forward>
+	<forward name="IPSalary" path="/salary/pp.jsp"></forward>
+	 <forward name="success" path="/right.jsp"></forward>
+	  <forward name="excel" path="/front/PersonalEffectRegisterByExcel.jsp"></forward>
+	    <forward name="insertByForm" path="/front/PersonalEffectRegister.jsp"></forward>
+	    <forward name="personalEffectselect" path="/front/PersonalEffectSelect.jsp"></forward>
+      	<forward name="AccountTypeTime" path="/salary/AccountTypeTime.jsp"></forward>
+      	<forward name="PostBounce" path="/front/bounce/PostBounceRegister.jsp"></forward>
+      </action>
+    <action
+      attribute="indexForm"
+      name="indexForm"
+      parameter="actionType"
+      path="/index"
+      scope="request"
+      type="app.web.struts.action.IndexAction" >
+	  <forward name="DepartmentIndexAdd" path="/index/DepartmentIndexAdd.jsp"></forward>
+      <forward name="CompanyIndexAdd" path="/index/CompanyIndexAdd.jsp"></forward>
+      <forward name="CompanyShow" path="/index/CompanyIndexShow.jsp"></forward>
+      <forward name="CompanyShow_Action" path="/index.do?actionType=doSelectAll"></forward>
+      <forward name="everyDepartmentEmpIndexShow" path="/index/everyDepartmentEmpIndexShow.jsp" />
+      <forward name="everyDepartmentEmpIndexShow_justlook" path="/index/everyDepartmentEmpIndexShow_justlook.jsp"></forward>
+      <forward name="addEmpIndex" path="/index/EmpIndexAdd.jsp"></forward>
+      <forward name="EmpIndexShow" path="/index/show/EmpIndexShow.jsp"></forward>
+      <forward name="ManagerIndexAdd" path="/index/show/ManagerIndexAdd.jsp"></forward>
+      <forward name="indexShow" path="/index/UpdateIndex.jsp"></forward>
+      <forward name="addSelfDempEmpIndexs" path="/index/departEmpIndex/addSelfDempEmpIndexs.jsp"></forward>
+       <forward name="scoreSelfDempEmpIndexs" path="/index/departEmpIndex/scoreSelfDempEmpIndexs.jsp"></forward>
+       <forward name="empIndexScore" path="/index/EmpIndexScore.jsp"></forward>
+   		<forward name="showKpiState" path="/empIndex.do?actionType=showDepartmentIndexState"></forward>
+      </action>
+      
+       <action
+      attribute="indexForm"
+      name="indexForm"
+      parameter="actionType"
+      path="/dindex"
+      scope="request"
+      type="app.web.struts.action.DepartmentIndexAction" >
+	  <forward name="selfDempEmpIndexsShow" path="/index/departEmpIndex/addSelfDempEmpIndexs.jsp"></forward>
+      </action>
+      
+        <action
+      parameter="actionType"
+      path="/chejianjiangjin"
+      scope="request"
+      type="app.web.struts.action.hr.ChejianjiangjinAction" >
+	  <forward name="overtimeManager" path="/front/overtime.jsp"></forward>
+      </action>
+      
+    <action
+      attribute="departIndex"
+      name="departIndexForm"
+      parameter="actionType"
+      path="/departIndex"
+      scope="request"
+      type="app.web.struts.action.DepartIndexAction">
+      <forward name="DepartmentIndexAdd" path="/index/DepartmentIndexAdd.jsp" />
+      <forward name="DepartmentIndexShow" path="/index/departmentIndexShow.jsp" />
+      <forward name="MyCompanyIndexAction" path="/departIndex.do?actionType=MyCompanyIndex" />
+      <forward name="MyCompanyIndex" path="/index/MyCompanyIndex.jsp" />
+      <forward name="MyCompanyIndexR" path="/index/MyCompanyIndex_justlook.jsp" />
+      <forward name="selectDepart" path="/index/DepartmentIndexShow_selectDepart.jsp" />
+      <forward name="EachDepartInsert" path="/index/EachDepartInsert.jsp" />
+      <forward name="test" path="/test.jsp" />
+      <forward name="CompanyShow" path="/index/CompanyIndexShow.jsp"></forward>
+      <forward name="DepartmentIndexShow" path="/index/show/DepartmentIndexShow.jsp"></forward>
+   	  <forward name="EmpIndexShow" path="/index/show/EmpIndexShow.jsp"></forward>
+      <forward name="AddDepartIndex" path="/departIndex.do?actionType=doSelectDepartmentDetails2"></forward>
+      </action>
+    <action
+      attribute="userForm"
+      name="userForm"
+      parameter="actionType"
+      path="/user"
+      scope="request"
+      type="app.web.struts.action.UserAction">
+      <forward name="success" path="/right.jsp" />
+    </action>
+    <action
+      attribute="employeeProductForm"
+      input="/form/employeeProduct.jsp"
+      name="employeeProductForm"
+      parameter="actionType"
+      path="/employeeProduct"
+      scope="session"
+      type="app.web.struts.action.EmployeeProductAction" >
+	  <forward name="DailyRecordQuery" path="/front/PersonalEffectSelect.jsp"></forward>
+      </action>
+    <action
+      attribute="proposalForm"
+      name="proposalForm"
+      parameter="actionType"
+      path="/proposal"
+      scope="request"
+      type="app.web.struts.action.ProposalAction" >
+      <forward name="Select_Form" path="/vave/Select_Form.jsp"></forward>
+      <forward name="ProposalDetails" path="/vave/VAVE_proposalForm_demo.jsp"></forward>
+      <forward name="Proposal_approval" path="/vave/Proposal_approval_Select.jsp"></forward>
+      <forward name="Proposal_approval2" path="/vave/Proposal_approval_Select2.jsp"></forward>
+      <forward name="doSearchAllCompanyList" path="/vave/Proposal_approval_Select3.jsp"></forward>
+      <forward name="ProposalDetails_selfShow" path="/vave/VAVE_proposalForm_demo_selfShow.jsp"></forward>
+      <forward name="ProposalDetails_OutShow" path="/vave/VAVE_proposalForm_demo_OutShow.jsp"></forward>
+      <forward name="VAVE_proposalForm_state0" path="/vave/VAVE_proposalForm_state0.jsp" />
+      <forward name="VAVE_proposalForm_state1" path="/vave/The Department/VAVE_proposalForm_state1.jsp" />
+      <forward name="VAVE_proposalForm_state2" path="/vave/Outside the department/VAVE_proposalForm_state2.jsp" />
+       <forward name="VAVE_proposalForm_state3" path="/vave/Company/VAVE_proposalForm_state3.jsp" />
+     <forward name="ProposalDetails_taskShow" path="/vave/task/ProposalDetails_taskShow.jsp"></forward>
+     <forward name="MyTaskTeam" path="/vave/newTask/createProject.jsp"></forward>
+      <forward name="VAVE_proposalForm" path="/vave/VAVE_proposalForm.jsp"></forward>
+      <forward name="selectMyProposalForm" path="/proposal.do?actionType=doSearch"></forward>
+      <forward name="SelectMyTeamTask" path="/proposal.do?actionType=doSelecetMyTaskTeam"></forward>
+      <forward name="finishedProject" path="/vave/newTask/finishedProject.jsp"></forward>
+      <forward name="AllTopic" path="/vave/Statistics/AllTopic.jsp"></forward>
+      </action>
+    <action
+      attribute="mainSuggestionForm"
+      input="/form/mainSuggestion.jsp"
+      name="mainSuggestionForm"
+      parameter="actionType"
+      path="/mainSuggestion"
+      scope="request"
+      type="app.web.struts.action.MainSuggestionAction" >
+     <forward name="doSearchSelfDepartment" path="/proposal.do?actionType=doSearchOthers"></forward>
+      </action>
+    <action
+      attribute="otherSuggestionForm"
+      input="/form/otherSuggestion.jsp"
+      name="otherSuggestionForm"
+      parameter="actionType"
+      path="/otherSuggestion"
+      scope="request"
+      type="app.web.struts.action.OtherSuggestionAction" >
+      <forward name="doSearchOutside" path="/proposal.do?actionType=doSearchOutside"></forward>
+      </action>
+    <action
+      attribute="empIndexForm"
+      input="/form/empIndex.jsp"
+      name="empIndexForm"
+      parameter="actionType"
+      path="/empIndex"
+      scope="request"
+      type="app.web.struts.action.EmpIndexAction" >
+      <forward name="MyCompanyIndex" path="/departIndex.do?actionType=MyCompanyIndex"/>
+      <forward name="empIndexShow" path="/index/empIndexShow.jsp" />
+      <forward name="empIndexShowR" path="/index/empIndexShowR.jsp" />	
+      <forward name="doSelectEmpByDepartId" path="/employee.do?actionType=doSelectEmpByDepartId"></forward>
+      <forward name="empIndexAdd" path=""></forward>
+      <forward name="KpiState" path="/index/KpiState.jsp"></forward>
+      <forward name="showKpiState" path="/empIndex.do?actionType=showDepartmentIndexState"></forward>
+      </action>
+
+      
+    <action
+      attribute="companySuggestionForm"
+      input="/form/companySuggestion.jsp"
+      name="companySuggestionForm"
+      parameter="actionType"
+      path="/companySuggestion"
+      scope="request"
+      type="app.web.struts.action.CompanySuggestionAction" >
+      <forward name="SearchAllCompany" path="/proposal.do?actionType=doSearchAllCompany"></forward>
+      </action>
+    <action
+      attribute="taskForm"
+      input="/form/task.jsp"
+      name="taskForm"
+      parameter="actionType"
+      path="/task"
+      scope="request"
+      type="app.web.struts.action.TaskAction" >
+      <forward name="MyTasksList" path="/vave/task/MyTasksList.jsp" />
+      <forward name="MyControlTaskList" path="/vave/task/MyControlTaskList.jsp"></forward>
+      <forward name="selectMyTeamTaskDetails" path="/proposal.do?actionType=doSelecetMyTaskTeam"></forward>
+      <forward name="AddMembers" path="/vave/newTask/AddMembers.jsp"></forward>
+      <forward name="ChangManager" path="/vave/newTask/changManager.jsp"></forward>
+     <forward name="selectMyTask" path="/task.do?actionType=doSelectMyTask"></forward>
+     <forward name="projectList" path="/vave/Statistics/projectList.jsp"></forward>
+      </action>                                    
+    <action
+      attribute="statisticsForm"
+      input="/form/statistics.jsp"
+      name="statisticsForm"
+      parameter="actionType"
+      path="/statistics"
+      scope="request"
+      type="app.web.struts.action.StatisticsAction" >
+     <forward name="depart" path="/vave/Statistics/department.jsp"></forward>
+     <forward name="rate" path="/vave/Statistics/rate.jsp"></forward>
+    <forward name="approveRate" path="/vave/Statistics/appraveRate.jsp"></forward>
+      </action>
+    <action
+      attribute="eporForm"
+      input="/form/epor.jsp"
+      name="eporForm"
+      parameter="actionType"
+      path="/epor"
+      scope="request"
+      type="app.epor.struts.action.EporAction" >
+    <forward name="showPrForm" path="/epor/showPrForm.jsp"></forward>  
+    <forward name="showBuyer" path="/epor/approve/buyerConfirm.jsp"></forward>
+    <forward name="success" path="/epor/success.html"></forward>
+    <forward name="SELF" path="/epor/updatePrForm.jsp"></forward>
+     <forward name="print" path="/epor/Print.jsp"></forward>
+     <forward name="showPrFormTip" path="/epor/showPrFormTip.jsp"></forward>
+       <forward name="showPrFormTip" path="/epor/showPrFormTip.jsp"></forward>
+         <forward name="admin" path="/epor/adminupdatePrForm.jsp"></forward>
+     <forward name="reject" path="/epor/rejectPrForm.jsp"></forward>
+     <forward name="processImg" path="/epor/processImg.jsp"></forward>
+      <forward name="updateProject" path="/epor/baseInfo/UpdateProject.jsp"></forward>
+     <forward name="updateSubject" path="/epor/baseInfo/UpdateSubject.jsp"></forward>
+     <forward name="showPrFormMoblieTip" path="/mobile/showPrFormTip.jsp"></forward>
+    </action>
+    <action
+      attribute="vaveInfoForm"
+      input="/form/vaveInfo.jsp"
+      name="vaveInfoForm"
+      parameter="actionType"
+      path="/vaveInfo"
+      scope="request"
+      type="app.web.struts.action.VaveInfoAction" >
+      <forward name="showAll" path="/vave/baseInfo/AnnSale.jsp"></forward>
+      </action>
+    <action
+      attribute="rightsForm"
+      input="/form/rights.jsp"
+      name="rightsForm"
+      parameter="actionType"
+      path="/rights"
+      scope="request"
+      type="web.action.base.RightsAction" >
+      <forward name="EmpRightManager" path="/rights/EmpRightManager.jsp"></forward>
+      <forward name="showRights" path="/rights.do?actionType=rightsManager"></forward>
+      </action>
+    <action
+      attribute="oSForm"
+      input="/form/oS.jsp"
+      name="oSForm"
+      parameter="actionType"
+      path="/oS"
+      scope="request"
+      type="app.web.struts.action.OSAction" >
+      <forward name="OsManager" path="/admin/OsManager.jsp"></forward>
+      </action>
+    <action
+      attribute="figureAndPostIdForm"
+      input="/form/figureAndPostId.jsp"
+      name="figureAndPostIdForm"
+      parameter="actionType"
+      path="/figureAndPostId"
+      scope="request"
+      type="app.web.struts.action.FigureAndPostIdAction" >
+    
+     
+      <forward name="addExcel0" path="/front/hrpost/addExcel0.jsp"></forward>
+       <forward name="addExcel1" path="/front/hrpost/addExcel1.jsp"></forward>
+        <forward name="addExcel2" path="/front/hrpost/addExcel2.jsp"></forward>
+         <forward name="addExcel3" path="/front/hrpost/addExcel3.jsp"></forward>
+     <!--图号 -->
+     <forward name="FigureManager" path="/front/hrpost/th/FigureManager.jsp"></forward>
+     <forward name="BounceFigureUpdate" path="/front/hrpost/th/FigureAccount.jsp"></forward>
+     <forward name="FigureInbounds" path="/front/hrpost/th/FigureInbounds.jsp"></forward>
+    	<forward name="FigureAccount" path="/front/hrpost/th/FigureAccount.jsp"></forward>
+      <!-- 工序 -->
+     <forward name="BouncePostManager" path="/front/hrpost/gx/Padd.jsp"></forward>
+     <forward name="BouncePostUpdate" path="/front/hrpost/gx/BouncePostupdate.jsp"></forward>
+      </action>
+    <action
+      attribute="plmForm"
+      name="plmForm"
+      parameter="actionType"
+      path="/plm"
+      scope="request"
+      type="app.web.struts.action.plm.PlmAction" >
+     <forward name="plm" path="/plm/plm.jsp"></forward>  
+     <forward name="MpartTreeShow" path="/plm/MpartTreeShow.jsp"></forward>  
+      <forward name="showDetails" path="/plm/showDetails.jsp"></forward>  
+    </action>
+    <action
+      attribute="cwForm"
+      input="/form/cw.jsp"
+      name="cwForm"
+      parameter="actionType"
+      path="/cw"
+      scope="request"
+      type="app.web.struts.action.cw.CwAction" >
+      <forward name="cwMainframe" path="/cw/cwMainframe.jsp"></forward>
+      <forward name="DetailShow" path="/cw/DetailShow.jsp"></forward>
+      <forward name="logs" path="/cw/log.jsp"></forward>
+      </action>
+    <action
+      attribute="auditForm"
+      input="/form/audit.jsp"
+      name="auditForm"
+      parameter="actionType"
+      path="/audit"
+      scope="request"
+      type="app.web.struts.action.AuditAction" >
+      <forward name="auditManager" path="/audit/select2.jsp"></forward>
+      </action>
+      
+      <action 
+      attribute="newsForm"
+      path="/news"
+      scope="request"
+      parameter="actionType"
+      name="newsForm"
+      type="app.web.struts.action.news.NewsAction" >
+      <forward name="detailShow" path="/company/DetailShow.jsp"></forward>   
+      <forward name="personalShowList" path="/company/personal/showList.jsp"></forward>  
+      <forward name="company" path="/company/Company.jsp"></forward>
+      <forward name="MenuManager" path="/company/personal/MenuManager.jsp"></forward>
+      <forward name="release2" path="/company/personal/release2.jsp"></forward>
+      </action>
+    <action
+      attribute="menuForm"
+      input="/form/menu.jsp"
+      name="menuForm"
+      parameter="actionType"
+      path="/menu"
+      scope="request"
+      type="app.web.struts.action.MenuAction" />
+      
+    <action
+      attribute="businessTopicForm"
+      input="/form/businessTopic.jsp"
+      name="businessTopicForm"
+      parameter="actionType"
+      path="/businessTopic"
+      scope="request"
+      type="app.web.struts.action.vave.BusinessTopicAction" >
+     <forward name="topicList" path="/vave/kpi/topicList.jsp"/>
+      <forward name="myTopicList" path="/vave/kpi/myTopicList.jsp"/>
+     <forward name="business" path="/vave/kpi/business.jsp"/>
+      <forward name="updateBusiness" path="/vave/kpi/updateBusiness.jsp"/>
+       <forward name="showBusiness" path="/vave/kpi/showBusiness.jsp"/>
+          <forward name="myTopicListAction" path="/businessTopic.do?actionType=doSelectMyself"/>
+    </action>
+    <action
+      attribute="accountForm"
+      input="/form/account.jsp"
+      name="accountForm"
+      parameter="actionType"
+      path="/account"
+      scope="request"
+      type="app.web.struts.action.vave.AccountAction" >
+       <forward name="showAccount" path="/vave/shop/showAccount.jsp"/>
+         <forward name="showAccountGoods" path="/vave/shop/showAccountGoods.jsp"/>
+     </action>
+    <action
+      attribute="goodsForm"
+      input="/form/goods.jsp"
+      name="goodsForm"
+      parameter="actionType"
+      path="/goods"
+      scope="request"
+      type="app.web.struts.action.vave.GoodsAction" >
+      <forward name="goodsDetails" path="/vave/shop/goodsDetails.jsp"></forward>
+      <forward name="goodsList" path="/vave/shop/goodsList.jsp"></forward>
+      </action>
+    <action
+      parameter="actionType"
+      path="/roomSystem"
+      name="roomForm"
+      attribute="roomForm"
+      scope="request"
+      type="app.web.struts.action.meeting.RoomSystemAction" >
+      <forward name="details" path="/HumanResource/assembly_room/details.jsp"></forward>
+      <forward name="doTest" path="/HumanResource/assembly_room/dashbar.jsp"></forward>
+      <forward name="success" path="/HumanResource/assembly_room/success.jsp"></forward>
+       <forward name="accessoryDetails" path="/HumanResource/assembly_room/updateAccessory.jsp"></forward>
+     </action>
+    <action
+      parameter="actionType"
+      path="/labAction"
+      name="labActionForm"
+      attribute="labActionForm"
+      scope="request"
+      type="app.web.struts.action.lab.LabActionAction" >
+ 	 <forward name="details" path="/Lab/Experiment_Apply/innerForm.jsp"></forward>
+ 	  <forward name="approve" path="/Lab/Experiment_Apply/approve/approve.jsp"></forward>
+ 	 </action>
+   <action
+      parameter="actionType"
+      path="/mainData"
+      name="MainDataForm"
+      attribute="MainDataForm"
+      scope="request"
+      type="app.web.struts.action.pcl.maindata.MainDataAction" >
+ 	 <forward name="showList" path="/PCL/MainData/showList.jsp"></forward>
+ 	 <forward name="details" path="/PCL/MainData/FormDetails.jsp"></forward>
+ 	 <forward name="showDetails" path="/PCL/MainData/showDetails.jsp"></forward>
+ 	 <forward name="showDetailsTip" path="/PCL/MainData/showDetailsTip.jsp"></forward>
+ 	 <forward name="Form" path="/PCL/MainData/Form.jsp"></forward>
+ 	 <forward name="success" path="/epor/success.html"></forward>
+ 	 <forward name="explain" path="/PCL/MainData/explain.jsp"></forward>
+ 	<forward name="updateDetails" path="/PCL/MainData/updateDetails.jsp"></forward>
+ 	 </action>
+ 	 
+    <action
+      attribute="sapForm"
+      input="/form/sap.jsp"
+      name="sapForm"
+      parameter="actionType"
+      path="/sap"
+      scope="request"
+      type="app.web.struts.action.SAP.SapAction" >
+     <forward name="rs" path="/PCL/MainData/showDetails.jsp"></forward>
+    </action>
+    <action
+      parameter="actionType"
+      attribute="DMSForm"
+      name="DMSForm"
+      path="/dMS"
+      scope="request"
+      type="app.web.struts.action.dms.DMSActionAction" >
+     <forward name="indicate" path="/DMS/BaseInfo/indicate.jsp"></forward>
+     <forward name="define" path="/DMS/Input/define.jsp"></forward>	
+     </action>
+
+
+</action-mappings>
+  <message-resources parameter="res.MessageResources"></message-resources>
+</struts-config>
+

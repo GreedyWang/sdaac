@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"> 
+
+<description>查看权限函数</description> 
+<tlib-version>1.1</tlib-version> 
+<short-name>mytag</short-name> 
+<uri>/mytag</uri> 
+<tag>  
+        <!--配置标签名-->  
+        <name>rights</name>  
+        <!--确定标签的处理类-->  
+        <tag-class>app.biz.impl.AuthorizationUtilImpl</tag-class>  
+        <!--确定标签的标签体，标签体为空-->  
+        <body-content>JSP</body-content>  
+        <!--配置标签属性: driver-->  
+        <attribute>  
+        <name>hasRoles</name>  
+        <required>true</required>  
+        <rtexprvalue>true</rtexprvalue>  
+        </attribute>  
+        <!--配置标签属性: url -->  
+        <attribute>  
+        <name>needRoleID</name>  
+        <required>true</required>  
+        <rtexprvalue>true</rtexprvalue>  
+        </attribute>  
+</tag> 
+
+
+</taglib>

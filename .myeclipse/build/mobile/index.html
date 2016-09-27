@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<link rel="stylesheet" type="text/css" href="tips.css" media="all" />
+		<script language="javascript">
+function change(){
+var a=window.document.getElementById("num").value;
+var no_tips='',over='N';
+var init="<p class='tips' id='tips'></p>";
+
+window.document.getElementById("no_tips").innerHTML=init;
+if(a==0)
+window.document.getElementById("no_tips").innerHTML=no_tips;
+else if(a>9) 
+window.document.getElementById("tips").innerHTML=over;
+else
+window.document.getElementById("tips").innerHTML=a;
+}
+
+</script>
+	</head>
+
+	<body bgcolor="#999999">
+
+		<div>
+			<a href="www.baidu.com"><div class="btn"></div>
+			</a>
+			<div id="no_tips">
+				<p class="tips" id="tips"></p>
+			</div>
+		</div>
+
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<form method="get" onclick="show()">
+			<input name="num" id="num" />
+			<input type="button" onclick="change()" value="输入数字" />
+		</form>
+	</body>
+</html>

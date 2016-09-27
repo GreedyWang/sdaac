@@ -834,6 +834,10 @@ public class PrPrForm  implements java.io.Serializable {
 	
 	private int sapNO;
 	
+	/**
+	 * update this method should sync EprExcel4Finance.getSapNO manually.
+	 * @return
+	 */
 	public int getSapNO() {
 		int newSsid = ssid;
 		int tenYearTotal = 963;

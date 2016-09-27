@@ -444,6 +444,7 @@ Ext.onReady(function() {
 						});	
 				}
             },
+            allowBlank : false,
 			editable : false
 		});
 		
@@ -460,7 +461,7 @@ Ext.onReady(function() {
 			triggerAction : 'all',
 			emptyText : 'Select a state...',
 			selectOnFocus : true,
-			width : comboxSize,
+			width : comboxSize + 100,
 			blankText : 'empty',
 			//allowBlank : false,
 			listeners:{
@@ -475,6 +476,7 @@ Ext.onReady(function() {
 			});	
 		}		
                 },
+			allowBlank : false,
 			editable : false
 		});
 
@@ -846,15 +848,9 @@ Ext.onReady(function() {
 			//row4
 			{
 				layout:'form',
-				width: 240,
-				colspan:1,
+				width: 480,
+				colspan:2,
 				items:[buyer1]
-			},{
-				layout:'form',
-				width: 240,
-				colspan:1,
-				items:[buyer2]
-					
 			}				
 			,{
 				layout:'form',
@@ -878,10 +874,17 @@ Ext.onReady(function() {
 				colspan:1,
 				items:[projectList]
 					
+			}
+			,{
+				layout:'form',
+				width: 480,
+				colspan:2,
+				items:[buyer2]
+					
 			},{
 				layout:'form',
-				width: 1060,
-				colspan:4,
+				width: 560,
+				colspan:2,
 				items:[buyerShowList]
 			},
 			//row6
